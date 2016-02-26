@@ -1,7 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {App} from './App.jsx';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+// Fuck it, going to decide not to care about getting clean URLs right now
 
 import {Home} from './components/Home';
 import About from './components/About';
@@ -12,7 +13,7 @@ import Repos from './components/Repos';
 import Repo from './components/Repo';
 
 render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
       <Route path='/about' component={About}/>

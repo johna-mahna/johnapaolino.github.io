@@ -49,6 +49,11 @@ export let App = React.createClass({
             </div>
           </div>
         </div>
+        <code>
+          Below the fold Testing:
+          <NavLink to="/" activeClassName="active" onlyActiveOnIndex>Home</NavLink>
+          <NavLink to='/about' activeClassName='active'>About</NavLink>
+        </code>
         { this.props.children }
       </div>
     );

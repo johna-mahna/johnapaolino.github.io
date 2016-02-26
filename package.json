@@ -1,7 +1,7 @@
 {
-  "name": "react-es6-webpack-boilerplate",
+  "name": "johnapaolino.github.io/",
   "version": "4.0.0",
-  "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack.",
+  "description": "An attempt at a building a better personal website.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js --history-api-fallback",
@@ -18,7 +18,7 @@
     "babel",
     "webpack"
   ],
-  "author": "Vasanth Krishnamoorthy (http://www.vasanthk.com)",
+  "author": "Johna Paolino",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vasanthk/react-es6-webpack-boilerplate/issues"
