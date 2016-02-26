@@ -1,7 +1,38 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .content-container {
   width: 100%;
   height: 100%;
   overflow: scroll;
+}
+
+.content-container > .content {
+  width: 88%;
+  margin-left: 6%;
+  margin-right: 6%;
+  text-align: center;
+}
+
+.header {
+  display: block;
+  padding: 20px 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: fixed;
+  background-color: #fff;
+  width: 90%;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header-spacer {
+  display: block;
+  width: 100%;
+  height: 75px;
+  background-color: #fff;
 }
 
 .x-icon {

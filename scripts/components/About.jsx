@@ -13,9 +13,10 @@ export let About = React.createClass({
     return (
       <div>
         <div className='content-container fade-in'>
-        <Header name='About' color={ this.props.color }/>
-          <div className='fade-in'>
-            Tell them about you
+          <Header name='About' color={ this.props.color }/>
+          <div className='header-spacer'></div>
+          <div className='content fade-in'>
+              Tell them about you
           </div>
         </div>
          <Frame color={ this.props.color }/>
