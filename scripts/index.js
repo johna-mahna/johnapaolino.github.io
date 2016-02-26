@@ -5,7 +5,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 // Fuck it, going to decide not to care about getting clean URLs right now
 
 import {Home} from './components/Home';
-import About from './components/About';
+import {About} from './components/About.jsx';
 import {Work} from './components/Work.jsx';
 import Ux from './components/Ux';
 import Dev from './components/Dev';
