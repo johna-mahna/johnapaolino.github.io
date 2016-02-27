@@ -17,6 +17,13 @@ export let Frame = React.createClass({
       borderSize: 8
     };
   },
+  componentWillReceiveProps: function(nextProps) {
+    // TODO address fade on home screen
+    // console.log(nextProps);
+    // this.setState({
+    //   fade: true
+    // });
+  },
   handleResize: function(e) {
     this.setState({
       screenWidth: window.innerWidth + 'px',
@@ -67,7 +74,7 @@ export let Frame = React.createClass({
       left: '0'
     };
     return (
-      <div className='fade-in'>
+      <div>
         <span style={ leftFrame }></span>
         <span style={ topFrame }></span>
         <span style={ bottomFrame }></span>

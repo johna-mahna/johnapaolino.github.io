@@ -2,6 +2,14 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+#hero-image {
+   background-color: black;
+   background: url(https://scontent-atl.xx.fbcdn.net/hphotos-xpf1/t31.0-8/10014373_10154039880765391_7771534828794318269_o.jpg) no-repeat black;
+   background-size: cover;
+   color: Black;
+   z-index: 1;
+}
+
 .content-container {
   width: 100%;
   height: 100%;
@@ -20,19 +28,21 @@ body {
   padding: 25px 0 20px 0;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 8px;
   position: fixed;
   background-color: #fff;
   width: 90%;
   border-bottom: 1px solid #ccc;
   font-size: 1.5em;
   font-weight: bold;
+  z-index: 10;
 }
 
 .header-spacer {
   display: block;
   width: 100%;
   height: 95px;
-  background-color: #fff;
+  background-color: none;
 }
 
 .x-icon {

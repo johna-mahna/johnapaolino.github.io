@@ -25,15 +25,15 @@ export let Header = React.createClass({
       marginLeft: '-4px'
     };
     return (
-      <div className='header fade-in'>
-        <NavLink to="/" activeClassName="active" onlyActiveOnIndex>
+      <div className='header'>
+        <NavLink to="/" activeClassName="active" onlyActiveOnIndex className='fade-in'>
           <div style={{ display: 'inline-block', width: '30px', marginLeft: '18px', marginRight: '18px' }}>
             <span style={{ display: 'inline-block', width: '10px'}}></span>
             <span className='x-icon' style={ leftX }></span>
             <span className='x-icon' style={ rightX }></span>
           </div>
         </NavLink>
-        <span style={{ verticalAlign: 'super' }}>{ this.props.name }</span>
+        <span className='fade-in' style={{ verticalAlign: 'super' }}>{ this.props.name }</span>
       </div>
     );
   }

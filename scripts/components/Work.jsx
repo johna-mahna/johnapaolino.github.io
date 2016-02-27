@@ -12,19 +12,14 @@ export let Work = React.createClass({
   render() {
     return (
       <div>
-        <div className='content-container fade-in'>
+        <div className='content-container'>
           <Header name='Work' color={ this.props.color }/>
-           <div className='header-spacer'></div>
-           <div className='content'>
-             <ul className='fade-in'>
-               <li><NavLink to="/work/ux">UX</NavLink></li>
-               <li><NavLink to="/work/dev">Dev</NavLink></li>
-               <li><NavLink to="/work/brand">Brand</NavLink></li>
-             </ul>
-             { this.props.children }
-           </div>
+          <div className='header-spacer'></div>
+          <div className='content fade-in'>
+            { this.props.children }
+          </div>
         </div>
-         <Frame color={ this.props.color }/>
+        <Frame color={ this.props.color }/>
       </div>
     );
   }

@@ -12,7 +12,7 @@ export let About = React.createClass({
   render() {
     return (
       <div>
-        <div className='content-container fade-in'>
+        <div className='content-container'>
           <Header name='About' color={ this.props.color }/>
           <div className='header-spacer'></div>
           <div className='content fade-in'>

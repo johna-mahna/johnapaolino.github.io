@@ -12,14 +12,14 @@ export let Contact = React.createClass({
   render() {
     return (
       <div>
-        <div className='content-container fade-in'>
+        <div className='content-container'>
           <Header name='Contact' color={ this.props.color }/>
           <div className='header-spacer'></div>
           <div className='content fade-in'>
               Contact information is going to go here
           </div>
         </div>
-         <Frame color={ this.props.color }/>
+        <Frame color={ this.props.color }/>
       </div>
     );
   }
