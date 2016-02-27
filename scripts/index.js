@@ -6,6 +6,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 import {Home} from './components/Home';
 import {About} from './components/About.jsx';
+import {Contact} from './components/Contact.jsx';
 import {Work} from './components/Work.jsx';
 import Ux from './components/Ux';
 import Dev from './components/Dev';
@@ -19,6 +20,7 @@ render((
   <Router history={hashHistory}>
     <Route path="/" component={App}/>
     <Route path='/about' component={About}/>
+    <Route path='/contact' component={Contact}/>
     <Route path='/work' component={Work}>
       <Route path="/work/ux" component={Ux}/>
       <Route path="/work/dev" component={Dev}/>
