@@ -8,13 +8,17 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <Header name='Repos' color={ this.props.color }/>
+        <Header name='Code Lab' color={ this.props.color }/>
         <div className='header-spacer'></div>
-       <ul>
-         <li><NavLink to="/repos/rackt/react-router">React Router</NavLink></li>
-         <li><NavLink to="/repos/facebook/react">React</NavLink></li>
-       </ul>
-       { this.props.children }
+        <div className='big-box'>
+          <h2>Coming Soon...</h2>
+        </div>
+       { /* this.props.children
+         <ul>
+           <li><NavLink to="/repos/rackt/react-router">React Router</NavLink></li>
+           <li><NavLink to="/repos/facebook/react">React</NavLink></li>
+         </ul>
+         */ }
        <Frame color={ this.props.color }/>
       </div>
     );

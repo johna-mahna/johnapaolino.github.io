@@ -4,10 +4,23 @@ body {
 
 #hero-image {
    background-color: black;
-   background: url(https://scontent-atl.xx.fbcdn.net/hphotos-xpf1/t31.0-8/10014373_10154039880765391_7771534828794318269_o.jpg) no-repeat black;
+   background-color: #fff;
    background-size: cover;
    color: Black;
    z-index: 1;
+}
+
+#hero-image {
+   background-color: black;
+   background: url(https://photos-5.dropbox.com/t/2/AAB-sdTxFz6yFlvjm6CTl19OJvuEhVR1a1JAYYOR79RAKw/12/268788073/jpeg/32x32/1/_/1/2/background-image.jpg/ENr1wKkEGCYgAigC/b8J-HD5roHA6HopDk5aAxsMlQD7wvJh7B3MDZ4i70Qs?size=1280x960&size_mode=3) no-repeat black;
+   background-size: cover;
+   color: Black;
+   z-index: 1;
+}
+
+.giant-button-pink {
+  font-size: 2em;
+  background-color: pink;
 }
 
 .content-container {
@@ -42,6 +55,20 @@ body {
   display: block;
   width: 100%;
   height: 95px;
+  background-color: none;
+}
+
+.give-me-some-space {
+  display: block;
+  width: 100%;
+  height: 25px;
+  background-color: none;
+}
+
+.give-me-some-serious-space {
+  display: block;
+  width: 100%;
+  height: 100px;
   background-color: none;
 }
 

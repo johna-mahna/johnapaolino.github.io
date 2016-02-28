@@ -8,9 +8,9 @@ import {Home} from './components/Home';
 import {About} from './components/About.jsx';
 import {Contact} from './components/Contact.jsx';
 import {Work} from './components/Work.jsx';
-import Ux from './components/Ux';
-import Dev from './components/Dev';
-import Brand from './components/Brand';
+import {Process} from './components/Process.jsx';
+import {Projects} from './components/Projects.jsx';
+import {Brand} from './components/Brand.jsx';
 import NoMatch from './components/NoMatch';
 
 import Repos from './components/Repos';
@@ -22,9 +22,9 @@ render((
     <Route path='/about' component={About}/>
     <Route path='/contact' component={Contact}/>
     <Route component={Work}>
-      <Redirect from='/work' to='/work/ux'/>
-      <Route path="/work/ux" component={Ux}/>
-      <Route path="/work/dev" component={Dev}/>
+      <Redirect from='/work' to='/work/process'/>
+      <Route path="/work/process" component={Process}/>
+      <Route path="/work/projects" component={Projects}/>
       <Route path="/work/brand" component={Brand}/>
     </Route>
     <Route path="/repos" component={Repos}>
