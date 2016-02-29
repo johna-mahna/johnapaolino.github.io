@@ -11,8 +11,8 @@ export let Projects = React.createClass({
           <h1>Recent Projects</h1>
           <div>blah blah blah</div>
         </div>
-        <NavLink to="/work/process" className='pull-left'>&#60;&#60;&#32;Process</NavLink>
-        <NavLink to="/work/brand" className='pull-right'>Brand&#32;&#62;&#62;</NavLink>
+        <NavLink to="/work/brand" className='pull-left'>&#60;&#60;&#32;Brand</NavLink>
+        <NavLink to="/work/process" className='pull-right'>Process&#32;&#62;&#62;</NavLink>
         <div className='give-me-some-space'></div>
         <div className='capsule underscore'></div>
         <div className='capsule'>
@@ -48,7 +48,7 @@ export let Projects = React.createClass({
         <div className='capsule underscore'></div>
         <div className='give-me-some-space'></div>
         <button>
-          <NavLink to="/work/brand">Next Up: Brand</NavLink>
+          <NavLink to="/work/process">Next Up: Process</NavLink>
         </button>
         <div className='give-me-some-serious-space'></div>
       </div>

@@ -44,11 +44,17 @@ export let App = React.createClass({
       <div id='hero-image' style={ fullScreen }>
         <div className='big-box'>
           <div className='header-spacer'></div>
-          <div className='pull-right'>
-            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="about" path='about' color="#FDC400"/></span>
+          <div className='link-container pull-right'>
             <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="work" path='work' color="#E95973"/></span>
+            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="about" path='about' color="#FDC400"/></span>
             <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="code lab" path='repos' color="#4A90E2"/></span>
             <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="contact" path='contact' color="#01BB8B"/></span>
+          </div>
+          <div className='capsule'>
+            <span className='column' style={{ position: 'fixed', bottom: '10', left:'10', padding: '10px', backgroundColor: 'rgba(255,255,255,0.65)' }}>
+              This website was built using react and react-router. Check out the code&#32;
+              [ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank'>here</a> ].
+            </span>
           </div>
           <Frame color={ this.state.color }/>
         </div>
@@ -65,11 +71,11 @@ let LinkWidget = React.createClass({
       padding: '0 10px'
     };
     return(
-      <span data-color={ this.props.color } className='hover'>
+      <NavLink className='main-link hover' to={ path } activeClassName='active' data-color={ this.props.color } style={{ color: '#000', textDecoration: 'none' }}>
         <span style={ bracketStyle } data-color={ this.props.color }>[</span>
-        <NavLink to={ path } activeClassName='active' data-color={ this.props.color } style={{ color: '#000', textDecoration: 'none' }}>{ this.props.name }</NavLink>
+        <span data-color={ this.props.color }>{ this.props.name }</span>
         <span style={ bracketStyle } data-color={ this.props.color }>]</span>
-      </span>
+      </NavLink>
     );
   }
 });

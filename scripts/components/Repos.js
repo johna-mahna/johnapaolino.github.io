@@ -10,7 +10,7 @@ export default React.createClass({
       <div>
         <Header name='Code Lab' color={ this.props.color }/>
         <div className='header-spacer'></div>
-        <div className='big-box'>
+        <div className='big-box fade-in'>
           <h2>Coming Soon...</h2>
         </div>
        { /* this.props.children

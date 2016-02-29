@@ -12,10 +12,28 @@ body {
 
 #hero-image {
    background-color: black;
-   background: url(https://photos-5.dropbox.com/t/2/AAB-sdTxFz6yFlvjm6CTl19OJvuEhVR1a1JAYYOR79RAKw/12/268788073/jpeg/32x32/1/_/1/2/background-image.jpg/ENr1wKkEGCYgAigC/b8J-HD5roHA6HopDk5aAxsMlQD7wvJh7B3MDZ4i70Qs?size=1280x960&size_mode=3) no-repeat black;
+   background: url(./img/background-image.jpg) no-repeat black;
    background-size: cover;
    color: Black;
    z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .link-container {
+      position: absolute;
+      bottom: 95px;
+      left: 15;
+      text-align: center;
+    }
+    .main-link {
+        display: block;
+        background-color: rgba(255,255,255,0.45);
+        font-weight: bold;
+        min-width: 340px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 5px;
+    }
 }
 
 .giant-button-pink {
@@ -38,13 +56,13 @@ body {
 
 .header {
   display: block;
-  padding: 25px 0 20px 0;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 25px 10px 20px 10px;
+  margin-left: 2%;
+  margin-right: 2%;
   margin-top: 8px;
   position: fixed;
   background-color: #fff;
-  width: 90%;
+  width: 96%;
   border-bottom: 1px solid #ccc;
   font-size: 1.5em;
   font-weight: bold;

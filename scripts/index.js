@@ -22,7 +22,7 @@ render((
     <Route path='/about' component={About}/>
     <Route path='/contact' component={Contact}/>
     <Route component={Work}>
-      <Redirect from='/work' to='/work/process'/>
+      <Redirect from='/work' to='/work/projects'/>
       <Route path="/work/process" component={Process}/>
       <Route path="/work/projects" component={Projects}/>
       <Route path="/work/brand" component={Brand}/>
