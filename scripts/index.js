@@ -4,6 +4,7 @@ import {App} from './App.jsx';
 import { Router, Route, hashHistory, IndexRoute, Redirect } from 'react-router';
 // Fuck it, going to decide not to care about getting clean URLs right now
 
+
 import {Home} from './components/Home';
 import {About} from './components/About.jsx';
 import {Contact} from './components/Contact.jsx';
@@ -22,10 +23,10 @@ render((
     <Route path='/about' component={About}/>
     <Route path='/contact' component={Contact}/>
     <Route component={Work}>
+      <Route path="/work/process" component={Process} ignoreScrollBehavior/>
+      <Route path="/work/projects" component={Projects} ignoreScrollBehavior/>
+      <Route path="/work/brand" component={Brand} ignoreScrollBehavior/>
       <Redirect from='/work' to='/work/projects'/>
-      <Route path="/work/process" component={Process}/>
-      <Route path="/work/projects" component={Projects}/>
-      <Route path="/work/brand" component={Brand}/>
     </Route>
     <Route path="/repos" component={Repos}>
       <Route path="/repos/:userName/:repoName" component={Repo}/>

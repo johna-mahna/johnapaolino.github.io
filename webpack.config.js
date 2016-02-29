@@ -66,7 +66,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         loaders: ['babel'],
         include: path.join(__dirname, 'scripts')
       }

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from './NavLink';
+import ReactDOM from 'react-dom';
 import {text} from '../text';
 
 export let Projects = React.createClass({
@@ -9,12 +9,9 @@ export let Projects = React.createClass({
         <div>
           <div className='give-me-some-space'></div>
           <h1>Recent Projects</h1>
-          <div>blah blah blah</div>
+          <div>{ text.projects.general }</div>
         </div>
-        <NavLink to="/work/brand" className='pull-left'>&#60;&#60;&#32;Brand</NavLink>
-        <NavLink to="/work/process" className='pull-right'>Process&#32;&#62;&#62;</NavLink>
         <div className='give-me-some-space'></div>
-        <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
           <div style={{ textAlign: 'left' }}>
@@ -45,11 +42,6 @@ export let Projects = React.createClass({
           <img src="../img/builder.gif" className='column two-thirds centered'/>
         </div>
         <div className='give-me-some-space'></div>
-        <div className='capsule underscore'></div>
-        <div className='give-me-some-space'></div>
-        <button>
-          <NavLink to="/work/process">Next Up: Process</NavLink>
-        </button>
         <div className='give-me-some-serious-space'></div>
       </div>
     );

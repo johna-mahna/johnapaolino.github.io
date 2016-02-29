@@ -18,7 +18,7 @@ export let About = React.createClass({
           <div className='header-spacer'></div>
           <div className='content fade-in'>
             <div className='big-box'>
-              <div className='capsule underscore'>
+              <div className='capsule underscore mobile-hide'>
                 <div className='give-me-some-space'></div>
                 <div className='capsule'>
                   {/* TODO get the images to link down to sections */}

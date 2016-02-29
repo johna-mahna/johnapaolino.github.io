@@ -19,20 +19,12 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .link-container {
-      position: absolute;
-      bottom: 95px;
-      left: 15;
-      text-align: center;
+    .mobile-hide {
+      display: none;
     }
-    .main-link {
-        display: block;
-        background-color: rgba(255,255,255,0.45);
-        font-weight: bold;
-        min-width: 340px;
-        width: 100%;
-        padding: 10px;
-        margin: 10px 5px;
+    .mobile-full {
+      display: block;
+      width: 100%;
     }
 }
 
@@ -102,6 +94,19 @@ body {
   -moz-animation: fadein 2s; /* Firefox */
   -webkit-animation: fadein 2s; /* Safari and Chrome */
   -o-animation: fadein 2s; /* Opera */
+}
+
+.sub-nav {
+  margin: 10px 0;
+  margin-right: 10px;
+}
+
+.sub-nav:hover, .sub-nav:focus {
+  text-decoration: none;
+}
+
+.sub-nav-active {
+  border-bottom: 2px solid #E95973;
 }
 
 @keyframes fadein {

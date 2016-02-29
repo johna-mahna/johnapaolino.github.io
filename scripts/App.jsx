@@ -8,8 +8,8 @@ export let App = React.createClass({
   getInitialState () {
     return {
       color: '#313538',
-      screenWidth: window.innerWidth + 'px',
-      screenHeight: window.innerHeight + 'px',
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight
     }
   },
   updateColors (event) {
@@ -25,8 +25,8 @@ export let App = React.createClass({
   },
   handleResize: function(e) {
     this.setState({
-      screenWidth: window.innerWidth + 'px',
-      screenHeight: window.innerHeight + 'px'
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight
     });
   },
   componentDidMount: function() {
@@ -37,18 +37,26 @@ export let App = React.createClass({
   },
   render() {
     let fullScreen = {
-      width: this.state.screenWidth,
-      height: this.state.screenHeight
+      width: this.state.screenWidth + 'px',
+      height: this.state.screenHeight + 'px',
+    };
+    let mobileLink = {
+      backgroundColor: 'red',
+      display: 'block',
+      width: '100%',
+      border: '1px solid red',
     };
     return (
       <div id='hero-image' style={ fullScreen }>
         <div className='big-box'>
           <div className='header-spacer'></div>
-          <div className='link-container pull-right'>
-            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="work" path='work' color="#E95973"/></span>
-            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="about" path='about' color="#FDC400"/></span>
-            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="code lab" path='repos' color="#4A90E2"/></span>
-            <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors }><LinkWidget name="contact" path='contact' color="#01BB8B"/></span>
+          <div className='capsule'>
+            <div className='link-container pull-right' style={ (this.state.screenWidth < 480) ? {backgroundColor: '#000'} : {}}>
+              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="work" path='work' color="#E95973"/></span>
+              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="about" path='about' color="#FDC400"/></span>
+              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? {display: 'none'} : {}}><LinkWidget name="code lab" path='repos' color="#4A90E2"/></span>
+              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="contact" path='contact' color="#01BB8B"/></span>
+            </div>
           </div>
           <div className='capsule'>
             <span className='column' style={{ position: 'fixed', bottom: '10', left:'10', padding: '10px', backgroundColor: 'rgba(255,255,255,0.65)' }}>
@@ -71,7 +79,7 @@ let LinkWidget = React.createClass({
       padding: '0 10px'
     };
     return(
-      <NavLink className='main-link hover' to={ path } activeClassName='active' data-color={ this.props.color } style={{ color: '#000', textDecoration: 'none' }}>
+      <NavLink className='hover' to={ path } activeClassName='active' data-color={ this.props.color } style={{ color: '#000', textDecoration: 'none' }}>
         <span style={ bracketStyle } data-color={ this.props.color }>[</span>
         <span data-color={ this.props.color }>{ this.props.name }</span>
         <span style={ bracketStyle } data-color={ this.props.color }>]</span>
