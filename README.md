@@ -17,6 +17,11 @@ npm start
 Open http://localhost:5000
 ```
 
+### Build Latest
+```
+npm run build
+```
+
 ### Linting
 
 ESLint with React linting options have been enabled.
