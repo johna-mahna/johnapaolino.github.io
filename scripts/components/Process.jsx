@@ -2,17 +2,13 @@ import React from 'react';
 import {text} from '../text';
 
 export let Process = React.createClass({
-  scrollTop () {
-    console.log('yay scroll');
-    window.scroll(0,0);
-  },
+  //TODO get scroll to top working better
   render() {
-    let nextLink = { position: 'fixed', top: '40px', right: '35px', zIndex: '200' };
     return (
       <div className='fade-in'>
         <div>
           <div className='give-me-some-space'></div>
-          <h1 ref='myRefString'>UX Process</h1>
+          <h1 ref='myRefString'>Design Development Process</h1>
           <div>{ text.process.general }</div>
         </div>
         <div className='give-me-some-space'></div>

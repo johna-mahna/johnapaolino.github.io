@@ -16,12 +16,13 @@ export let Contact = React.createClass({
           <Header name='Contact' color={ this.props.color }/>
           <div className='header-spacer'></div>
           <div className='content fade-in'>
-            <h2>I would love to meet you in person:</h2>
-            <img src="../img/contact_map.png" width="500px"/>
-
+            <h2>Sure, coffee sounds great!</h2>
+            <div className='give-me-some-space'></div>
+            <img src="../img/contact.jpg" width="350px"/>
+            <div className='give-me-some-space'></div>
             <div className='capsule underscore'></div>
             <div className='give-me-some-space'></div>
-            <h2>But here are some links in case you prefer being digitally connected:</h2>
+            <h2>Or connect with me on the internet:</h2>
             <div className='give-me-some-space'></div>
             <div className='give-me-some-space'></div>
             <div className='capsule'>

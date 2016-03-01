@@ -41,28 +41,51 @@ export let App = React.createClass({
       height: this.state.screenHeight + 'px',
     };
     let mobileLink = {
-      backgroundColor: 'red',
       display: 'block',
       width: '100%',
-      border: '1px solid red',
+      textAlign: 'center',
+      backgroundColor: 'rgba(255,255,255,0.85)',
+      padding: '10px',
+      borderRadius: '5px',
+      margin: '10px 0'
     };
+    let mobileWidth = (this.state.screenWidth < 480);
     return (
       <div id='hero-image' style={ fullScreen }>
         <div className='big-box'>
-          <div className='header-spacer'></div>
           <div className='capsule'>
-            <div className='link-container pull-right' style={ (this.state.screenWidth < 480) ? {backgroundColor: '#000'} : {}}>
-              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="work" path='work' color="#E95973"/></span>
-              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="about" path='about' color="#FDC400"/></span>
-              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? {display: 'none'} : {}}><LinkWidget name="code lab" path='repos' color="#4A90E2"/></span>
-              <span onMouseEnter={ this.updateColors } onMouseLeave={ this.returnColors } style={ (this.state.screenWidth < 480) ? mobileLink : {}}><LinkWidget name="contact" path='contact' color="#01BB8B"/></span>
+            <div className='give-me-some-space'></div>
+            <div className='link-container' className={mobileWidth ? '' : 'pull-right'} style={ mobileWidth ? {position: 'absolute', bottom: '15', width: '90%' } : {}}>
+              <span onMouseEnter={ this.updateColors }
+                onTouchStart={ this.updateColors }
+                onMouseLeave={ this.returnColors }
+                style={ mobileWidth ? mobileLink : {}}>
+                <LinkWidget name="work" path='work' color="#E95973"/>
+              </span>
+              <span onMouseEnter={ this.updateColors }
+                onTouchStart={ this.updateColors }
+                onMouseLeave={ this.returnColors }
+                style={ mobileWidth ? mobileLink : {}}>
+                <LinkWidget name="about" path='about' color="#FDC400"/>
+              </span>
+              <span onMouseEnter={ this.updateColors }
+                onTouchStart={ this.updateColors }
+                onMouseLeave={ this.returnColors }
+                style={ mobileWidth ? {display: 'none'} : {}}>
+                <LinkWidget name="code lab" path='repos' color="#4A90E2"/>
+              </span>
+              <span onMouseEnter={ this.updateColors }
+                onTouchStart={ this.updateColors }
+                onMouseLeave={ this.returnColors }
+                style={ mobileWidth ? mobileLink : {}}>
+                <LinkWidget name="contact" path='contact' color="#01BB8B"/>
+              </span>
             </div>
-          </div>
-          <div className='capsule'>
-            <span className='column' style={{ position: 'fixed', bottom: '10', left:'10', padding: '10px', backgroundColor: 'rgba(255,255,255,0.65)' }}>
-              This website was built using react and react-router. Check out the code&#32;
-              [ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank'>here</a> ].
-            </span>
+            <div className='give-me-some-space'></div>
+            <div className='column pull-right' style={mobileWidth ? { display: 'none' } : { marginTop: '20px', backgroundColor: 'rgba(255,255,255,0.65)', fontSize: '0.8em', textAlign: 'right' }}>
+              This website was built using react and react-router.&#32;&#32;
+              <div>[ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank'>source code</a> ]</div>
+            </div>
           </div>
           <Frame color={ this.state.color }/>
         </div>

@@ -18,19 +18,7 @@ export let About = React.createClass({
           <div className='header-spacer'></div>
           <div className='content fade-in'>
             <div className='big-box'>
-              <div className='capsule underscore mobile-hide'>
-                <div className='give-me-some-space'></div>
-                <div className='capsule'>
-                  {/* TODO get the images to link down to sections */}
-                  <img src='../img/timeline_yale.png' width='200px' className='column one-third'/>
-                  <img src='../img/timeline_ramsa.png' width='200px' className='column one-third'/>
-                  <img src='../img/timeline_yieldbot.png' width='200px' className='column one-third'/>
-                </div>
-                <div className='capsule'>
-                  <img src='../img/timeline.png' width='840px' className='column four-fifths centered'/>
-                </div>
-                <div className='give-me-some-space'></div>
-              </div>
+              {/* TODO get funny timeline in that links down to sections */}
               <div className='capsule underscore'>
                 <div className='give-me-some-space'></div>
                 <img src='../img/about_architecture.png' width='200px'/>
@@ -64,7 +52,9 @@ export let About = React.createClass({
                 <h2>Up Next?</h2>
                 <div className='column four-fifths centered'>{ text.about.nextUp }</div>
                 <div className='give-me-some-space'></div>
-                <NavLink to='/contact'>Visit my Contact Page</NavLink>
+                <NavLink to='/contact'>
+                  <button>Visit my Contact Page</button>
+                </NavLink>
               </div>
             </div>
           </div>

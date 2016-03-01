@@ -17,13 +17,7 @@ export let Frame = React.createClass({
       borderSize: 8
     };
   },
-  componentWillReceiveProps: function(nextProps) {
-    // TODO address fade on home screen
-    // console.log(nextProps);
-    // this.setState({
-    //   fade: true
-    // });
-  },
+  // TODO handle fade on homescreen frame
   handleResize: function(e) {
     this.setState({
       screenWidth: window.innerWidth + 'px',

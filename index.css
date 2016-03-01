@@ -12,7 +12,7 @@ body {
 
 #hero-image {
    background-color: black;
-   background: url(./img/background-image.jpg) no-repeat black;
+   background: url(./img/background-scribble.jpg) no-repeat black;
    background-size: cover;
    color: Black;
    z-index: 1;

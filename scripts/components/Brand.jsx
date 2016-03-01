@@ -15,7 +15,7 @@ export let Brand = React.createClass({
         <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
-          <h2>Brand Identity</h2>
+          <h2>Identity</h2>
           <div className='column one-half centered mobile-full'>{ text.brand.collateral }</div>
           <div className='give-me-some-space'></div>
           <img src='../img/brand_deck.jpg' width='200px' className='column one-fourth mobile-hide'/>
@@ -33,7 +33,7 @@ export let Brand = React.createClass({
             <img src='../img/brand_website-engineering.png' width='200px' className='column one-half mobile-hide'/>
           </div>
           <div className='give-me-some-space'></div>
-          <a href='https://www.yieldbot.com' target='_blank'>Visit the Live Website</a>
+          <a href='https://www.yieldbot.com' target='_blank'><h4>[ Visit the Live Website ]</h4></a>
           <div className='give-me-some-space'></div>
         </div>
         <div className='capsule underscore'></div>

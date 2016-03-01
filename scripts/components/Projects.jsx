@@ -12,6 +12,7 @@ export let Projects = React.createClass({
           <div>{ text.projects.general }</div>
         </div>
         <div className='give-me-some-space'></div>
+        <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
           <div style={{ textAlign: 'left' }}>
@@ -19,8 +20,15 @@ export let Projects = React.createClass({
             <div>{ text.projects.pub }</div>
           </div>
           <div className='give-me-some-space'></div>
-          <img src="../img/pub_code.png" className='column one-third mobile-hide'/>
-          <img src="../img/pub_gif.gif" className='column two-thirds mobile-full'/>
+          <div className='capsule'>
+            <img src="../img/pub_code.png" className='column one-third mobile-hide'/>
+            <img src="../img/pub_gif.gif" className='column two-thirds mobile-full'/>
+          </div>
+          <div className='give-me-some-space'></div>
+          <div className='capsule'>
+            <h3>Role: Design + Dev</h3>
+            { text.projects.pub_role }
+          </div>
         </div>
         <div className='give-me-some-space'></div>
         <div className='capsule underscore'></div>
@@ -29,8 +37,15 @@ export let Projects = React.createClass({
           <h2>Ad Hoc Reporting Tool</h2>
           <div>{ text.projects.reporting }</div>
           <div className='give-me-some-space'></div>
+          <div className='capsule'>
             <img src="../img/reporting.gif" className='column two-thirds mobile-full'/>
             <img src="../img/reporting_code.png" className='column one-third mobile-hide'/>
+          </div>
+          <div className='give-me-some-space'></div>
+          <div className='capsule'>
+            <h3>Role: Design + Dev</h3>
+            { text.projects.reporting_role }
+          </div>
         </div>
         <div className='give-me-some-space'></div>
         <div className='capsule underscore'></div>
@@ -40,6 +55,10 @@ export let Projects = React.createClass({
           <div>{ text.projects.builder }</div>
           <div className='give-me-some-space'></div>
           <img src="../img/builder.gif" className='column three-fourths centered'/>
+          <div className='give-me-some-space'></div>
+          <div className='capsule'>
+            <h3>Role: { text.projects.builder_role }</h3>
+          </div>
         </div>
         <div className='give-me-some-space'></div>
         <div className='give-me-some-serious-space'></div>
