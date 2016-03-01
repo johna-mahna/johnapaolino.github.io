@@ -1,27 +1,28 @@
 export let text = {
   "process": {
-    "general": "general",
-    "research": "blah blah architecture",
-    "ideas": "blah blah ramsa",
-    "collaborate": "blah blah yieldbot",
-    "execute": "blah blah code"
+    "general": "I’ve developed a range of techniques to help lead an effective product design process. Great products involve design decisions at a number of nested layers and cut points. I often see myself as a facilitator helping stakeholders realize the best solutions. Depending on the scale of the project and team, I adapt my tooling towards artifacts that will best bridge the gap between design and development in the situation. I have found value in separating the stages of the process into the following main concerns.",
+    "research": "The goal of research is to identify the blocks of the user. I utilize a number of collaborative activities that help users guide me in understanding their needs. Defining and articulating the design problem is critical to the downstream success of the project. I usually find discussions over SwimLane Diagrams the most successful because it helps maintain a more generic representation of the problem without leaping to experience solutions.",
+    "ideas": "I’m a big believer in sharing early and often. I deliver rough ideas back to users and stakeholders as quickly as possible. The goal of this phase of the design is to communicate the most succinct solutions so that we can build consensus in the right direction.",
+    "collaborate": "Once there is clear direction, I like stakeholders to maintain active participation. At Yieldbot, we have a fairly distributed team, so I find encouraging collaboration over shared documents as the best method. This also has the benefit of producing clear artifacts.",
+    "execute": "By this point, there is a clear solution, and specs can focus on micro details. If this process is executed successfully, engineers and product alike don’t get overloaded by specs because we’ve achieved clear direction much earlier."
   },
   "projects": {
-    "general": "general",
-    "reporting": "This project was originally developed by one of our data scientists. The application depended solely on URL query parameters so as more business intelligence teams started using it, there was a need for a more accessible front-end. I traveled to portland for a month, and worked with our data scientist to build out a front-end. We introduced a simple side menu that allowed users to quickly adjust the URL queries by a number of different dimensions. The application was build in Clojure / Clojurescript, using the OM framework.",
-    "pub": "Our configuration database was being represented very literally as lists across a number of pages. This made it difficult for internal users to understand hierarchy. This application created a clear structure. There was a lot of attention was spent in UX safety. Previously, these configurations were too easy to adjust, but this UI introduced concepts like “unlocking” to make changes, and confirming saves to assure safe client relationships.",
-    "builder": "Used across 4 teams. Wanted to inspire users to play and get creative with our ad offerings. Most client facing product."
+    "general": "As a previous member of the front-end team at Yieldbot, I have a strong technical understanding of our applications. On most projects, I have been deeply involved not only in design but also front-end implementation. I find huge value in having awareness of the different implementation cut points. This depth helps inform my design decisions as well as facilitate enjoyable ease of communication amongst the developers I work with.",
+    "reporting": "This project was originally developed by one of our data scientists as a dev tool for exploring potential reporting joins. As more business intelligence teams realized the applications capabilities, they wanted to use it more regularly but felt limited by the it’s technically heavy user experience. I traveled out to Portland for a month to work with one of our data scientist to build out a more accessible front-end solution. We introduced an unobtrusive side menu that allowed users to quickly add URL parameters through familiar dimensions. We built the application in Clojure & Clojurescript using the OM framework.",
+    "pub": "Previously, our configuration database was being represented very literally. There was little validation around model changes which lead mistakes that could jeopardize client relationships. The new application design aimed to introduce clear safety measures, confirmations, and clarity. The application was built using React.js.",
+    "builder": "This application needed to meet a number of organizational objectives. We wanted an application that could be used by a number of teams in a pre-sales workflow, but also inspire users across our company to get creative with our ad offerings."
   },
   "brand": {
-    "general": "general",
-    "collateral": "marketing stuff",
-    "website": "corportate website",
-    "guide": "stuff about guide"
+    "general": "Most of my work at Yieldbot has been focused on Application Design and Development. However, in my first year at the company, I was responsible for unifying Yieldbot’s brand and marketplace identity.",
+    "collateral": "I created a range of sales collateral establishing the Yieldbot’s aesthetic in the marketplace.",
+    "website": "I worked closely with the CEO and CPO to design our new corporate website. I was responsible for the site-mapping through CSS specs.",
+    "guide": "I’ve allowed the work I’ve done establishing Yieldbot’s aesthetic to translate into our interface products. Lately, I have been focused on a front-end style guide. Having been a member of the front-end team, I am aiming at a solution easy for developers to integrate into our tech-stack and build process."
   },
   "about": {
-    "architecture": "blah blah architecture",
-    "ramsa": "blah blah ramsa",
-    "yieldbot": "blah blah yieldbot",
-    "code": "blah blah code"
+    "architecture": "At Yale, I majored in architecture. Opposed to papers which were so often shared privately with professors, architecture projects were presented to the entire class. The rigor required to reach this level of completion challenged the limits of my creativity while forcing clear execution.",
+    "ramsa": "I was lucky enough to get a job working for the Dean of the Yale School of Architecture, Robert A.M. Stern. I worked at his studio for a little over two years where I focused work on multi-story residential buildings. These projects introduced a layer of complexity never covered in school. I loved working as part of a creative team to reach the best potential design solutions for the client.",
+    "yieldbot": "Although I loved architecture, I realized the 7-10 year timelines of the projects I worked on didn’t match my creatively ambitious appetite. Fortunately, a lot of the design thinking of architecture translated to user experience and product design. The same creativity, analysis and design rigor existed, now in two dimensional plane and a quicker iterative loop. As I mentioned, architecture projects took years to reach construction documents. However, I was quickly dazzled working in tech as I saw ideas transform into code in such rapid cycles.",
+    "code": "At Yieldbot, I’ve had the opportunity to lead product design as well as grow my engineering skills. I have been fortunate enough to work with skilled and accessible developers who have challenged me to grow my engineering expertise. I now value my understanding of code just as an architect does construction requirements. I find huge value in having awareness of the different implementation cut points. This depth has helped inform my design decisions as well as facilitate enjoyable ease of communication among the developers I work with.",
+    "nextUp": "I'm always interested in learning about creative projects."
   }
 }

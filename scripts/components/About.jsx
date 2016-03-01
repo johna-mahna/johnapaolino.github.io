@@ -34,23 +34,37 @@ export let About = React.createClass({
               <div className='capsule underscore'>
                 <div className='give-me-some-space'></div>
                 <img src='../img/about_architecture.png' width='200px'/>
-                <h2>Studied Architecture</h2>
-                <div>{ text.about.architecture }</div>
+                <h2>All-Nighters @ Architecture Studio</h2>
+                <div className='column four-fifths centered'>{ text.about.architecture }</div>
+                <div className='give-me-some-space'></div>
               </div>
               <div className='capsule underscore'>
                 <img src='../img/about_ramsa.png' width='250px'/>
-                <h2>Was an Architect at R.A.M.S.A.</h2>
-                <div><div>{ text.about.ramsa }</div></div>
+                <h2>What is this? A Center for Ants?</h2>
+                <div className='column four-fifths centered'>{ text.about.ramsa }</div>
+                <div className='give-me-some-space'></div>
               </div>
               <div className='capsule underscore'>
+                <div className='give-me-some-space'></div>
                 <img src='../img/about_yb.png' width='250px'/>
-                <h2>Work at Yieldbot</h2>
-                <div><div>{ text.about.yieldbot }</div></div>
+                <h2>Transitioning to Tech</h2>
+                <div className='column four-fifths centered'>{ text.about.yieldbot }</div>
+                <div className='give-me-some-space'></div>
               </div>
               <div className='capsule'>
+                <div className='give-me-some-space'></div>
                 <img src='../img/about_code.png' width='250px'/>
-                <h2>Learned to Code</h2>
-                <div><div>{ text.about.yieldbot }</div></div>
+                <h2>Code + Design</h2>
+                <div className='column four-fifths centered'>{ text.about.yieldbot }</div>
+              </div>
+              <div className='capsule underscore'></div>
+              <div className='give-me-some-space'></div>
+              <div className='capsule'>
+                <div className='give-me-some-space'></div>
+                <h2>Up Next?</h2>
+                <div className='column four-fifths centered'>{ text.about.nextUp }</div>
+                <div className='give-me-some-space'></div>
+                <NavLink to='/contact'>Visit my Contact Page</NavLink>
               </div>
             </div>
           </div>

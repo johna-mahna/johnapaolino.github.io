@@ -16,21 +16,21 @@ export let Projects = React.createClass({
           <div className='give-me-some-space'></div>
           <div style={{ textAlign: 'left' }}>
             <h2>Publisher Account Management</h2>
-            <div>{ text.projects.reporting }</div>
+            <div>{ text.projects.pub }</div>
           </div>
           <div className='give-me-some-space'></div>
-          <img src="../img/pub_code.png" className='column one-third'/>
-          <img src="../img/pub_gif.gif" className='column two-thirds'/>
+          <img src="../img/pub_code.png" className='column one-third mobile-hide'/>
+          <img src="../img/pub_gif.gif" className='column two-thirds mobile-full'/>
         </div>
         <div className='give-me-some-space'></div>
         <div className='capsule underscore'></div>
         <div className='capsule' style={{ textAlign: 'left' }}>
           <div className='give-me-some-space'></div>
           <h2>Ad Hoc Reporting Tool</h2>
-          <div>{ text.projects.pub }</div>
+          <div>{ text.projects.reporting }</div>
           <div className='give-me-some-space'></div>
-            <img src="../img/reporting.gif" className='column two-thirds'/>
-            <img src="../img/reporting_code.png" className='column one-third'/>
+            <img src="../img/reporting.gif" className='column two-thirds mobile-full'/>
+            <img src="../img/reporting_code.png" className='column one-third mobile-hide'/>
         </div>
         <div className='give-me-some-space'></div>
         <div className='capsule underscore'></div>
@@ -39,7 +39,7 @@ export let Projects = React.createClass({
           <h2>Ad Builder</h2>
           <div>{ text.projects.builder }</div>
           <div className='give-me-some-space'></div>
-          <img src="../img/builder.gif" className='column two-thirds centered'/>
+          <img src="../img/builder.gif" className='column three-fourths centered'/>
         </div>
         <div className='give-me-some-space'></div>
         <div className='give-me-some-serious-space'></div>

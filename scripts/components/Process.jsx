@@ -30,17 +30,17 @@ export let Process = React.createClass({
         <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
-          <div className='column one-third' style={{ textAlign: 'left' }}>
+          <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
             <h2>2. Rough Ideas</h2>
             <div>{ text.process.ideas }</div>
           </div>
-          <img src="../img/ux_rough.png" className='column two-thirds'/>
+          <img src="../img/ux_rough.png" className='column two-thirds mobile-full'/>
         </div>
         <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
-          <img src="../img/ux_collaborate_1.png" className='column two-thirds'/>
-          <div className='column one-third' style={{ textAlign: 'left' }}>
+          <img src="../img/ux_collaborate_1.png" className='column two-thirds mobile-full'/>
+          <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
             <h2>3. Collaborate</h2>
             <div>{ text.process.collaborate }</div>
           </div>
@@ -49,13 +49,12 @@ export let Process = React.createClass({
         <div className='capsule underscore'></div>
         <div className='capsule'>
           <div className='give-me-some-space'></div>
-          <div className='column one-third' style={{ textAlign: 'left' }}>
+          <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
             <h2>4. Execute</h2>
             <div>{ text.process.execute }</div>
           </div>
-          <img src="../img/ux_execute.png" className='column two-thirds'/>
+          <img src="../img/ux_execute.png" className='column two-thirds mobile-full'/>
         </div>
-        <div className='capsule underscore'></div>
         <div className='give-me-some-serious-space'></div>
       </div>
     );

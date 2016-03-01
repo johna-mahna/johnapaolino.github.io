@@ -26,6 +26,11 @@ body {
       display: block;
       width: 100%;
     }
+    .sub-nav {
+      display: inline-block;
+      width: 28%;
+      text-align: center;
+    }
 }
 
 .giant-button-pink {
