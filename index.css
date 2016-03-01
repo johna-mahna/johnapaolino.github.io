@@ -18,26 +18,6 @@ body {
    z-index: 1;
 }
 
-@media screen and (max-width: 480px) {
-    .mobile-hide {
-      display: none;
-    }
-    .mobile-full {
-      display: block;
-      width: 100%;
-    }
-    .sub-nav {
-      display: inline-block;
-      width: 28%;
-      text-align: center;
-    }
-}
-
-.giant-button-pink {
-  font-size: 2em;
-  background-color: pink;
-}
-
 .content-container {
   width: 100%;
   height: 100%;
@@ -144,5 +124,64 @@ body {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+      font-size: 3.5rem;
+    }
+    .mobile-hide {
+      display: none;
+    }
+    .mobile-full {
+      display: block;
+      width: 100%;
+    }
+    .sub-nav {
+      display: inline-block;
+      width: 28%;
+      text-align: center;
+    }
+    .x-icon {
+      height: 105px;
+      width: 15px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .header {
+      display: block;
+      padding: 25px 10px 20px 10px;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-top: 30px;
+      position: fixed;
+      background-color: #fff;
+      width: 90%;
+      border-bottom: 1px solid #ccc;
+      font-size: 1.5em;
+      font-weight: bold;
+      z-index: 10;
+    }
+    .header-spacer {
+      display: block;
+      width: 100%;
+      height: 205px;
+      background-color: none;
+    }
+    h3, h2, h1 {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    .mobile-button {
+      font-size: 0.9em;
+      padding: 55px;
+      margin: 25px 0;
+    }
+    img {
+      margin: 20px 0;
     }
 }

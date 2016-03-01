@@ -53,7 +53,7 @@ export let About = React.createClass({
                 <div className='column four-fifths centered'>{ text.about.nextUp }</div>
                 <div className='give-me-some-space'></div>
                 <NavLink to='/contact'>
-                  <button>Visit my Contact Page</button>
+                  <button className='mobile-button'>Visit my Contact Page</button>
                 </NavLink>
               </div>
             </div>

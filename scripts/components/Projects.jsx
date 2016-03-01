@@ -57,7 +57,7 @@ export let Projects = React.createClass({
           <img src="../img/builder.gif" className='column three-fourths centered'/>
           <div className='give-me-some-space'></div>
           <div className='capsule'>
-            <h3>Role: { text.projects.builder_role }</h3>
+            <div>Role: { text.projects.builder_role }</div>
           </div>
         </div>
         <div className='give-me-some-space'></div>

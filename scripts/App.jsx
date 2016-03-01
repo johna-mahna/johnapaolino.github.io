@@ -35,6 +35,21 @@ export let App = React.createClass({
   componentWillUnmount: function() {
     window.removeEventListener('resize', this.handleResize);
   },
+  detectMobile() {
+       if ( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+          return true;
+        }
+       else {
+          return false;
+        }
+  },
   render() {
     let fullScreen = {
       width: this.state.screenWidth + 'px',
@@ -42,20 +57,20 @@ export let App = React.createClass({
     };
     let mobileLink = {
       display: 'block',
-      width: '100%',
-      textAlign: 'center',
+      width: (this.state.screenWidth - 220) + 'px',
+      textAlign: 'left',
       backgroundColor: 'rgba(255,255,255,0.85)',
-      padding: '10px',
+      padding: '25px 0 25px 150px',
       borderRadius: '5px',
       margin: '10px 0'
     };
-    let mobileWidth = (this.state.screenWidth < 480);
+    let mobileWidth = this.detectMobile();
     return (
       <div id='hero-image' style={ fullScreen }>
         <div className='big-box'>
           <div className='capsule'>
             <div className='give-me-some-space'></div>
-            <div className='link-container' className={mobileWidth ? '' : 'pull-right'} style={ mobileWidth ? {position: 'absolute', bottom: '15', width: '90%' } : {}}>
+            <div className='link-container' className={mobileWidth ? '' : 'pull-right'} style={ mobileWidth ? {position: 'absolute', bottom: '35', left: '0' } : {}}>
               <span onMouseEnter={ this.updateColors }
                 onTouchStart={ this.updateColors }
                 onMouseLeave={ this.returnColors }

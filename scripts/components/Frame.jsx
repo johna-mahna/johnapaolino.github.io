@@ -3,36 +3,58 @@ import React from 'react';
 export let Frame = React.createClass({
   propTypes: {
     color: React.PropTypes.string,
-    borderSize: React.PropTypes.number
   },
   getInitialState () {
     return {
       screenWidth: window.innerWidth + 'px',
-      screenHeight: window.innerHeight + 'px'
+      screenHeight: window.innerHeight + 'px',
+      borderSize: 8
     };
   },
   getDefaultProps () {
     return {
-      color: '#4BA8FF',
-      borderSize: 8
+      color: '#4BA8FF'
     };
   },
   // TODO handle fade on homescreen frame
   handleResize: function(e) {
     this.setState({
       screenWidth: window.innerWidth + 'px',
-      screenHeight: window.innerHeight + 'px'
+      screenHeight: window.innerHeight + 'px',
+
     });
   },
   componentDidMount: function() {
     window.addEventListener('resize', this.handleResize);
+    let mobileWidth = this.detectMobile() || (this.state.screenWidth < 620);
+    if (mobileWidth) {
+      this.setState({
+        borderSize: 30
+      });
+    }
   },
   componentWillUnmount: function() {
     window.removeEventListener('resize', this.handleResize);
   },
+  detectMobile() {
+       if ( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+          return true;
+        }
+       else {
+          return false;
+        }
+  },
   render() {
+    let mobileWidth = this.detectMobile() || (this.state.screenWidth < 620);
     let leftFrame = {
-      width: this.props.borderSize + 'px',
+      width: this.state.borderSize + 'px',
       height: this.state.screenHeight,
       display: 'inline-block',
       backgroundColor: this.props.color,
@@ -41,7 +63,7 @@ export let Frame = React.createClass({
       left: '0'
     };
     let rightFrame = {
-      width: this.props.borderSize + 'px',
+      width: this.state.borderSize + 'px',
       height: this.state.screenHeight,
       display: 'inline-block',
       backgroundColor: this.props.color,
@@ -51,7 +73,7 @@ export let Frame = React.createClass({
     };
     let topFrame = {
       width: this.state.screenWidth,
-      height: this.props.borderSize + 'px',
+      height: this.state.borderSize + 'px',
       display: 'inline-block',
       backgroundColor: this.props.color,
       position: 'absolute',
@@ -60,7 +82,7 @@ export let Frame = React.createClass({
     };
     let bottomFrame = {
       width: this.state.screenWidth,
-      height: this.props.borderSize + 'px',
+      height: this.state.borderSize + 'px',
       display: 'inline-block',
       backgroundColor: this.props.color,
       position: 'absolute',

@@ -9,7 +9,23 @@ export let Contact = React.createClass({
       color: '#01BB8B'
     };
   },
+  detectMobile() {
+       if ( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+          return true;
+        }
+       else {
+          return false;
+        }
+  },
   render() {
+    let mobileWidth = this.detectMobile();
     return (
       <div>
         <div className='content-container'>
@@ -18,7 +34,7 @@ export let Contact = React.createClass({
           <div className='content fade-in'>
             <h2>Sure, coffee sounds great!</h2>
             <div className='give-me-some-space'></div>
-            <img src="../img/contact.jpg" width="350px"/>
+            <img src="../img/contact.jpg" width="350px" className='column centered mobile-full'/>
             <div className='give-me-some-space'></div>
             <div className='capsule underscore'></div>
             <div className='give-me-some-space'></div>
@@ -26,27 +42,27 @@ export let Contact = React.createClass({
             <div className='give-me-some-space'></div>
             <div className='give-me-some-space'></div>
             <div className='capsule'>
-              <div className='column one-fourth'>
+              <div className='column one-fourth mobile-full'>
                 <a href='https://github.com/johnapaolino' target='_blank'>
-                  <img src="../img/contact_github.png" width="75px"/>
+                  <img src="../img/contact_github.png" width={ (mobileWidth) ? '240px' : '75px'}/>
                   <div>github</div>
                 </a>
               </div>
-              <div className='column one-fourth'>
+              <div className='column one-fourth mobile-full'>
                 <a href='https://www.linkedin.com/in/johnapaolino' target='_blank'>
-                  <img src="../img/contact_linkedin.png" width="75px"/>
+                  <img src="../img/contact_linkedin.png" width={ (mobileWidth) ? '240px' : '75px'}/>
                   <div>linkedin</div>
                 </a>
               </div>
-              <div className='column one-fourth'>
+              <div className='column one-fourth mobile-full'>
                 <a href='https://www.twitter.com/johnapao' target='_blank'>
-                  <img src="../img/contact_twitter.png" width="75px"/>
+                  <img src="../img/contact_twitter.png" width={ (mobileWidth) ? '240px' : '75px'}/>
                   <div>twitter</div>
                 </a>
               </div>
-              <div className='column one-fourth'>
+              <div className='column one-fourth mobile-full'>
                 <a href='mailto:johna.paolino@gmail.com' target='_blank'>
-                  <img src="../img/contact_gmail.png" width="75px"/>
+                  <img src="../img/contact_gmail.png" width={ (mobileWidth) ? '240px' : '75px'}/>
                   <div>email</div>
                 </a>
               </div>
