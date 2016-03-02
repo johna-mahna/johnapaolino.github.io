@@ -21,27 +21,27 @@ export let About = React.createClass({
               {/* TODO get funny timeline in that links down to sections */}
               <div className='capsule underscore'>
                 <div className='give-me-some-space'></div>
-                <img src='../img/about_architecture.png' width='200px'/>
+                <img src='../img/about_architecture.png' width='200px' className='mobile-full'/>
                 <h2>All-Nighters @ Architecture Studio</h2>
                 <div className='column four-fifths centered'>{ text.about.architecture }</div>
                 <div className='give-me-some-space'></div>
               </div>
               <div className='capsule underscore'>
-                <img src='../img/about_ramsa.png' width='250px'/>
+                <img src='../img/about_ramsa.png' width='250px' className='mobile-full'/>
                 <h2>What is this? A Center for Ants?</h2>
                 <div className='column four-fifths centered'>{ text.about.ramsa }</div>
                 <div className='give-me-some-space'></div>
               </div>
               <div className='capsule underscore'>
                 <div className='give-me-some-space'></div>
-                <img src='../img/about_yb.png' width='250px'/>
+                <img src='../img/about_yb.png' width='250px' className='mobile-full'/>
                 <h2>Transitioning to Tech</h2>
                 <div className='column four-fifths centered'>{ text.about.yieldbot }</div>
                 <div className='give-me-some-space'></div>
               </div>
               <div className='capsule'>
                 <div className='give-me-some-space'></div>
-                <img src='../img/about_code.png' width='250px'/>
+                <img src='../img/about_code.png' width='250px' className='mobile-full'/>
                 <h2>Code + Design</h2>
                 <div className='column four-fifths centered'>{ text.about.code }</div>
               </div>
