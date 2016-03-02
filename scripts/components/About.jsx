@@ -43,7 +43,7 @@ export let About = React.createClass({
                 <div className='give-me-some-space'></div>
                 <img src='../img/about_code.png' width='250px'/>
                 <h2>Code + Design</h2>
-                <div className='column four-fifths centered'>{ text.about.yieldbot }</div>
+                <div className='column four-fifths centered'>{ text.about.code }</div>
               </div>
               <div className='capsule underscore'></div>
               <div className='give-me-some-space'></div>
