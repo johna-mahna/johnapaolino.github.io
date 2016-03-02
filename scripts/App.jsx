@@ -57,20 +57,20 @@ export let App = React.createClass({
     };
     let mobileLink = {
       display: 'block',
-      width: (this.state.screenWidth - 220) + 'px',
       textAlign: 'left',
-      backgroundColor: 'rgba(255,255,255,0.85)',
-      padding: '25px 0 25px 150px',
-      borderRadius: '5px',
-      margin: '10px 0'
+      fontSize: '1.1em',
+      margin: '55px 0'
     };
     let mobileWidth = this.detectMobile();
     return (
-      <div id='hero-image' style={ fullScreen }>
+      <div style={ fullScreen }>
         <div className='big-box'>
           <div className='capsule'>
-            <div className='give-me-some-space'></div>
-            <div className='link-container' className={mobileWidth ? '' : 'pull-right'} style={ mobileWidth ? {position: 'absolute', bottom: '35', left: '0' } : {}}>
+            { mobileWidth ?
+            <div className='give-me-some-space'></div> :
+            <div className='give-me-some-serious-space'></div>
+            }
+            <div className={ mobileWidth ? 'column two-thirds centered' : 'column two-thirds pull-left' } style={ mobileWidth ? {} : { textAlign: 'centered'}}>
               <span onMouseEnter={ this.updateColors }
                 onTouchStart={ this.updateColors }
                 onMouseLeave={ this.returnColors }
@@ -96,11 +96,35 @@ export let App = React.createClass({
                 <LinkWidget name="contact" path='contact' color="#01BB8B"/>
               </span>
             </div>
-            <div className='give-me-some-space'></div>
-            <div className='column pull-right' style={mobileWidth ? { display: 'none' } : { marginTop: '20px', backgroundColor: 'rgba(255,255,255,0.65)', fontSize: '0.8em', textAlign: 'right' }}>
-              This website was built using react and react-router.&#32;&#32;
-              <div>[ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank'>source code</a> ]</div>
+            <div className='capsule'>
+              <div className='give-me-some-space'></div>
+              { mobileWidth ?
+              <div>
+                <img src="./img/name-first.png" className='column centered' width='65%'/>
+                <img src="./img/name-last.png" className='column centered' width='65%'/>
+              </div>
+              :
+              <img src="./img/name.png" className='column one-half'/>
+              }
             </div>
+            <div className='capsule'>
+              <div className='give-me-some-space'></div>
+              { mobileWidth ?
+                <img src="./img/name-desc.png" width='70%' className='column centered'/> :
+                <img src="./img/name-desc.png" width='200px' className='column'/>
+              }
+            </div>
+            <div className='capsule'>
+              <div className='give-me-some-space'></div>
+              <div className='column one-half mobile-hide' style={{fontSize: '0.8em', marginLeft: '10px'}}>
+                This website was built using react and react-router.&#32;&#32;
+                [ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank'>source code</a> ]
+              </div>
+            </div>
+            { mobileWidth ?
+              '' :
+              <img src="./img/empire.png" width='200px' className='column pull-right' style={{ position: 'absolute', right: '35', bottom: '0' }}/>
+            }
           </div>
           <Frame color={ this.state.color }/>
         </div>
