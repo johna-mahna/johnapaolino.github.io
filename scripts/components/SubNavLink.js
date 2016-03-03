@@ -3,6 +3,6 @@ import { Link } from 'react-router'
 
 export default React.createClass({
   render() {
-    return <Link {...this.props} className='sub-nav mobile-full' activeClassName='sub-nav-active'/>
+    return <Link {...this.props} className='sub-nav' activeClassName='sub-nav-active'/>
   }
 })

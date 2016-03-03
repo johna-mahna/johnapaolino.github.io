@@ -33,26 +33,30 @@ export let Header = React.createClass({
       backgroundColor: this.props.color,
       transform: 'rotate(45deg)',
       WebkitTransform: 'rotate(45deg)',
-      marginLeft: (detectMobile ? '55px' : ''),
+      marginLeft: (detectMobile ? '25px' : ''),
       marginTop: (detectMobile ? '25px' : '')
     };
     let rightX = {
       backgroundColor: this.props.color,
       transform: 'rotate(-45deg)',
       WebkitTransform: 'rotate(-45deg)',
-      marginLeft: (detectMobile ? '55px' : '-4px'),
+      marginLeft: (detectMobile ? '-15px' : '-4px'),
       marginTop: (detectMobile ? '-105px' : '')
     };
     return (
       <div className='header'>
-        <NavLink to="/" activeClassName="active" onlyActiveOnIndex className='fade-in'>
-          <div style={{ display: 'inline-block', width: '30px', marginLeft: '18px', marginRight: '18px' }}>
-            <span style={{ display: 'inline-block', width: '10px'}}></span>
-            <span className='x-icon' style={ leftX }></span>
-            <span className='x-icon' style={ rightX }></span>
+        <div className='capsule'>
+          <div className='column full centered underscore'>
+            <NavLink to="/" activeClassName="active" onlyActiveOnIndex className='fade-in'>
+              <div style={{ display: 'inline-block' }}>
+                <span style={{ display: 'inline-block', width: '10px'}}></span>
+                <span className='x-icon' style={ leftX }></span>
+                <span className='x-icon' style={ rightX }></span>
+              </div>
+            </NavLink>
+            <span className='fade-in' style={ (detectMobile) ? { marginLeft: '80px', marginTop: '20px', display: 'inline-block', position: 'fixed', fontSize: '3em' } : { verticalAlign: 'super', marginLeft: '30px' }}>{ this.props.name }</span>
           </div>
-        </NavLink>
-        <span className='fade-in' style={ (detectMobile) ? { marginLeft: '125px', marginTop: '20px', display: 'inline-block', position: 'fixed', fontSize: '3em' } : { verticalAlign: 'super' }}>{ this.props.name }</span>
+        </div>
       </div>
     );
   }

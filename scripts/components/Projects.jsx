@@ -3,63 +3,93 @@ import ReactDOM from 'react-dom';
 import {text} from '../text';
 
 export let Projects = React.createClass({
+  detectMobile() {
+       if ( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+          return true;
+        }
+       else {
+          return false;
+        }
+  },
   render() {
+    let detectMobile = this.detectMobile();
     return (
-      <div className='fade-in'>
-        <div>
-          <div className='give-me-some-space'></div>
-          <h1>Recent Projects</h1>
-          <div>{ text.projects.general }</div>
-        </div>
-        <div className='give-me-some-space'></div>
-        <div className='capsule underscore'></div>
+      <div>
         <div className='capsule'>
-          <div className='give-me-some-space'></div>
-          <div style={{ textAlign: 'left' }}>
+          <div className='column full centered underscore'>
+            <h1>Recent Projects</h1>
+            <div>{ text.projects.general }</div>
+            <div className='give-me-some-space'></div>
+          </div>
+        </div>
+
+        <div className='capsule'>
+          <div className='column full centered'>
+            <div className='give-me-some-space'></div>
             <h2>Publisher Account Management</h2>
             <div>{ text.projects.pub }</div>
-          </div>
-          <div className='give-me-some-space'></div>
-          <div className='capsule'>
-            <img src="../img/pub_code.png" className='column one-third mobile-hide'/>
-            <img src="../img/pub_gif.gif" className='column two-thirds mobile-full'/>
-          </div>
-          <div className='give-me-some-space'></div>
-          <div className='capsule'>
-            <h3>Role: Design + Dev</h3>
-            { text.projects.pub_role }
-          </div>
-        </div>
-        <div className='give-me-some-space'></div>
-        <div className='capsule underscore'></div>
-        <div className='capsule' style={{ textAlign: 'left' }}>
-          <div className='give-me-some-space'></div>
-          <h2>Ad Hoc Reporting Tool</h2>
-          <div>{ text.projects.reporting }</div>
-          <div className='give-me-some-space'></div>
-          <div className='capsule'>
-            <img src="../img/reporting.gif" className='column two-thirds mobile-full'/>
-            <img src="../img/reporting_code.png" className='column one-third mobile-hide'/>
-          </div>
-          <div className='give-me-some-space'></div>
-          <div className='capsule'>
-            <h3>Role: Design + Dev</h3>
-            { text.projects.reporting_role }
+            <div className='give-me-some-space'></div>
+            <div>
+              <strong>Role: Design + Dev</strong>
+              <div>{ text.projects.pub_role }</div>
+            </div>
+            <div className='give-me-some-space'></div>
+            { detectMobile ?
+              <img src="../img/pub_gif.gif" width='1500px' style={{ overflow: 'hide' }}/> :
+              <div className='capsule underscore'>
+                <img src="../img/pub_gif.gif" className='column two-thirds'/>
+                <img src="../img/pub_code.png" className='column one-third'/>
+              </div>
+            }
           </div>
         </div>
-        <div className='give-me-some-space'></div>
-        <div className='capsule underscore'></div>
         <div className='capsule'>
-          <div className='give-me-some-space'></div>
-          <h2>Ad Builder</h2>
-          <div>{ text.projects.builder }</div>
-          <div className='give-me-some-space'></div>
-          <img src="../img/builder.gif" className='column three-fourths centered'/>
-          <div className='give-me-some-space'></div>
-          <div className='capsule'>
-            <div>Role: { text.projects.builder_role }</div>
+          <div className='column full centered'>
+            <h2>Ad Hoc Reporting Tool</h2>
+            <div>{ text.projects.reporting }</div>
+            <div className='give-me-some-space'></div>
+            <div>
+              <strong>Role: Design + Dev</strong>
+              <div>{ text.projects.reporting_role }</div>
+            </div>
+            <div className='give-me-some-space'></div>
+            { detectMobile ?
+              <img src="../img/reporting.gif" width='1500px' style={{ overflow: 'hide' }}/> :
+              <div className='capsule underscore'>
+                <img src="../img/reporting_code.png" className='column one-third'/>
+                <img src="../img/reporting.gif" className='column two-thirds'/>
+              </div>
+            }
           </div>
         </div>
+
+        <div className='capsule'>
+          <div className='column full centered'>
+            <h2>Ad Builder</h2>
+            <div>{ text.projects.builder }</div>
+            <div className='give-me-some-space'></div>
+            <div>
+              <strong>Role: Design</strong>
+              <div>{ text.projects.builder_role }</div>
+            </div>
+            <div className='give-me-some-space'></div>
+            { detectMobile ?
+              <img src="../img/builder.gif" width='1500px' style={{ overflow: 'hide' }}/> :
+              <div className='capsule'>
+                <img src="../img/builder.gif" className='column four-fifths centered'/>
+              </div>
+            }
+            <div className='give-me-some-space'></div>
+          </div>
+        </div>
+
         <div className='give-me-some-space'></div>
         <div className='give-me-some-serious-space'></div>
       </div>

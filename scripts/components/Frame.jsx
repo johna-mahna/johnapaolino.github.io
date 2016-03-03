@@ -60,7 +60,8 @@ export let Frame = React.createClass({
       backgroundColor: this.props.color,
       position: 'absolute',
       top: '0',
-      left: '0'
+      left: '0',
+      zIndex: '20'
     };
     let rightFrame = {
       width: this.state.borderSize + 'px',
@@ -69,7 +70,8 @@ export let Frame = React.createClass({
       backgroundColor: this.props.color,
       position: 'absolute',
       top: '0',
-      right: '0'
+      right: '0',
+      zIndex: '20'
     };
     let topFrame = {
       width: this.state.screenWidth,
@@ -78,7 +80,8 @@ export let Frame = React.createClass({
       backgroundColor: this.props.color,
       position: 'absolute',
       top: '0',
-      left: '0'
+      left: '0',
+      zIndex: '20'
     };
     let bottomFrame = {
       width: this.state.screenWidth,
@@ -87,7 +90,8 @@ export let Frame = React.createClass({
       backgroundColor: this.props.color,
       position: 'absolute',
       bottom: '0',
-      left: '0'
+      left: '0',
+      zIndex: '20'
     };
     return (
       <div>
