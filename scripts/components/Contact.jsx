@@ -28,7 +28,7 @@ export let Contact = React.createClass({
     let mobileWidth = this.detectMobile();
     return (
       <div>
-        <div className='content-container'>
+        <div className='frame-container'>
           <Header name='Contact' color={ this.props.color }/>
           <div className='header-spacer'></div>
           <div className='content fade-in'>

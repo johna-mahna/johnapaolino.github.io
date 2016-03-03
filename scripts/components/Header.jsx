@@ -28,20 +28,20 @@ export let Header = React.createClass({
         }
   },
   render() {
-    let mobileWidth = this.detectMobile();
+    let detectMobile = this.detectMobile();
     let leftX = {
       backgroundColor: this.props.color,
       transform: 'rotate(45deg)',
       WebkitTransform: 'rotate(45deg)',
-      marginLeft: (mobileWidth ? '55px' : ''),
-      marginTop: (mobileWidth ? '25px' : '')
+      marginLeft: (detectMobile ? '55px' : ''),
+      marginTop: (detectMobile ? '25px' : '')
     };
     let rightX = {
       backgroundColor: this.props.color,
       transform: 'rotate(-45deg)',
       WebkitTransform: 'rotate(-45deg)',
-      marginLeft: (mobileWidth ? '55px' : '-4px'),
-      marginTop: (mobileWidth ? '-105px' : '')
+      marginLeft: (detectMobile ? '55px' : '-4px'),
+      marginTop: (detectMobile ? '-105px' : '')
     };
     return (
       <div className='header'>
@@ -52,7 +52,7 @@ export let Header = React.createClass({
             <span className='x-icon' style={ rightX }></span>
           </div>
         </NavLink>
-        <span className='fade-in' style={ (mobileWidth) ? { marginLeft: '125px', verticalAlign: 'super', } : { verticalAlign: 'super' }}>{ this.props.name }</span>
+        <span className='fade-in' style={ (detectMobile) ? { marginLeft: '125px', marginTop: '20px', display: 'inline-block', position: 'fixed', fontSize: '3em' } : { verticalAlign: 'super' }}>{ this.props.name }</span>
       </div>
     );
   }

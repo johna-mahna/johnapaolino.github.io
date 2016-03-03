@@ -1,12 +1,3 @@
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-.content-container {
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-}
 
 .content-container > .content {
   width: 88%;
@@ -28,27 +19,6 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   z-index: 10;
-}
-
-.header-spacer {
-  display: block;
-  width: 100%;
-  height: 95px;
-  background-color: none;
-}
-
-.give-me-some-space {
-  display: block;
-  width: 100%;
-  height: 25px;
-  background-color: none;
-}
-
-.give-me-some-serious-space {
-  display: block;
-  width: 100%;
-  height: 100px;
-  background-color: none;
 }
 
 .x-icon {
