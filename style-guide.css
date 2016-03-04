@@ -140,11 +140,11 @@ button:hover, button.active {
 	    margin: 5% 0;
 	    padding: 2% 5%;
 		}
-		body{font-size:2em;}
+		body{font-size:45px;}
 		h1{font-size:2.4em;margin: 5% 0;}
 		h2{font-size:2em;margin: 5% 0;}
 		h3{font-size:2.4em;margin: 5% 0;}
-		a, a:hover, a.active, a > .active, a:focus {font-size:2em;}
+		a, a:hover, a.active, a > .active, a:focus {font-size:45px;}
 		.sub-nav{margin: 20px 20px;}
 		.full{width:95%; padding-left: 50px; padding-right: 50px; }
 		.x-icon {

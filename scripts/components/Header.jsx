@@ -54,7 +54,7 @@ export let Header = React.createClass({
                 <span className='x-icon' style={ rightX }></span>
               </div>
             </NavLink>
-            <span className='fade-in' style={ (detectMobile) ? { marginLeft: '80px', marginTop: '0px', display: 'inline-block', position: 'fixed', fontSize: '2em' } : { verticalAlign: 'super', marginLeft: '30px' }}>{ this.props.name }</span>
+            <span className='fade-in' style={ (detectMobile) ? { marginLeft: '80px', marginTop: '0px', display: 'inline-block', position: 'fixed', fontSize: '1.6em' } : { verticalAlign: 'super', marginLeft: '30px' }}>{ this.props.name }</span>
           </div>
         </div>
       </div>
