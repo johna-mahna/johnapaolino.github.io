@@ -65,7 +65,10 @@ export let App = React.createClass({
     return (
       <div>
         <div className='big-box'>
-          <div className='header-spacer'></div>
+          {detectMobile ?
+            <div className='give-me-some-space'></div> :
+            <div className='header-spacer'></div>
+          }
           <div className='capsule'>
             <div className={detectMobile ? 'column full centered center-text' : 'column full'}>
               <span onMouseEnter={ this.updateColors }
