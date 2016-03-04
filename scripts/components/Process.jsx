@@ -35,12 +35,12 @@ export let Process = React.createClass({
             <div>{ text.process.research }</div>
             <div className='give-me-some-space'></div>
             { detectMobile ?
-              <img src="../img/ux_research_1.jpg" width='90%' style={{ textAlign: 'center' }}/> :
+              <img src="../img/ux_research-3.jpg" width='90%' style={{ textAlign: 'center' }}/> :
               <div>
                 <div className='capsule underscore'>
-                  <img src='../img/ux_research_3.jpg' className='column one-third'/>
-                  <img src='../img/ux_research_1.jpg' className='column one-third'/>
-                  <img src='../img/ux_research_2.jpg' className='column one-third'/>
+                  <img src='../img/ux_research-3.jpg' className='column one-third'/>
+                  <img src='../img/ux_research-1.jpg' className='column one-third'/>
+                  <img src='../img/ux_research-2.jpg' className='column one-third'/>
                 </div>
                 <div className='give-me-some-space'></div>
               </div>
@@ -52,43 +52,66 @@ export let Process = React.createClass({
           <div className='give-me-some-space'></div>
           <div className='column full centered'>
             <div className='capsule'>
-              <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
+              <div className={ detectMobile ? '' : 'column one-third'} style={{ textAlign: 'left' }}>
                 <h2>2. Rough Ideas</h2>
                 <div>{ text.process.ideas }</div>
               </div>
-              <img src='../img/ux_rough.png' className='column two-thirds mobile-full'/>
+              { detectMobile ?
+                <div>
+                  <div className='give-me-some-space'></div>
+                  <img src='../img/ux_rough.png' width='1500px' style={{ overflow: 'hide' }}/>
+                </div>:
+                <img src='../img/ux_rough.png' className='column two-thirds'/>
+              }
             </div>
           </div>
+          <div className='column full centered underscore'></div>
         </div>
 
-
-
-        <div className='fade-in'>
-
-
-
-          <div className='capsule'>
-            <div className='give-me-some-space'></div>
-            <img src='../img/ux_collaborate_1.png' className='column two-thirds mobile-full'/>
-            <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
-              <h2>3. Collaborate</h2>
-              <div>{ text.process.collaborate }</div>
-            </div>
-          </div>
+        <div className='capsule'>
           <div className='give-me-some-space'></div>
-          <div className='capsule underscore'></div>
-          <div className='capsule'>
-            <div className='give-me-some-space'></div>
-            <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
-              <h2>4. Execute</h2>
-              <div>{ text.process.execute }</div>
-            </div>
-            <img src='../img/ux_execute.png' className='column two-thirds mobile-full'/>
+          <div className='column full centered'>
+            { detectMobile ?
+              <div className='capsule'>
+                <div className='column' style={{ textAlign: 'left' }}>
+                  <h2>3. Collaborate</h2>
+                  <div>{ text.process.collaborate }</div>
+                </div>
+                <img src='../img/ux_collaborate_1.png' width='1500px' style={{ overflow: 'hide', marginLeft: '-600px' }}/>
+              </div>
+              :
+              <div className='capsule'>
+                <img src='../img/ux_collaborate_1.png' className='column two-thirds mobile-full'/>
+                <div className='column one-third mobile-full' style={{ textAlign: 'left' }}>
+                  <h2>3. Collaborate</h2>
+                  <div>{ text.process.collaborate }</div>
+                </div>
+              </div>
+            }
           </div>
-          <div className='give-me-some-serious-space'></div>
+          <div className='column full centered underscore'></div>
         </div>
 
+        <div className='capsule'>
+          <div className='give-me-some-space'></div>
+          <div className='column full centered'>
+            <div className='capsule'>
+              <div className={ detectMobile ? '' : 'column one-third'} style={{ textAlign: 'left' }}>
+                <h2>4. Execute</h2>
+                <div>{ text.process.execute }</div>
+              </div>
+              { detectMobile ?
+                <div>
+                  <div className='give-me-some-space'></div>
+                  <img src='../img/ux_execute.png' width='1500px' style={{ overflow: 'hide', marginLeft: '-600px' }}/>
+                </div>:
+                <img src='../img/ux_execute.png' className='column two-thirds'/>
+              }
+            </div>
+          </div>
+        </div>
 
+        <div className='give-me-some-serious-space'></div>
       </div>
     );
   }

@@ -31,7 +31,7 @@ export let Projects = React.createClass({
         </div>
 
         <div className='capsule'>
-          <div className='column full centered'>
+          <div className='column full centered underscore'>
             <div className='give-me-some-space'></div>
             <h2>Publisher Account Management</h2>
             <div>{ text.projects.pub }</div>
@@ -43,15 +43,18 @@ export let Projects = React.createClass({
             <div className='give-me-some-space'></div>
             { detectMobile ?
               <img src="../img/pub_gif.gif" width='1500px' style={{ overflow: 'hide' }}/> :
-              <div className='capsule underscore'>
+              <div className='capsule'>
                 <img src="../img/pub_gif.gif" className='column two-thirds'/>
                 <img src="../img/pub_code.png" className='column one-third'/>
               </div>
             }
+            <div className='give-me-some-space'></div>
+            <div className='give-me-some-space'></div>
           </div>
         </div>
+
         <div className='capsule'>
-          <div className='column full centered'>
+          <div className='column full centered underscore'>
             <h2>Ad Hoc Reporting Tool</h2>
             <div>{ text.projects.reporting }</div>
             <div className='give-me-some-space'></div>
@@ -61,12 +64,13 @@ export let Projects = React.createClass({
             </div>
             <div className='give-me-some-space'></div>
             { detectMobile ?
-              <img src="../img/reporting.gif" width='1500px' style={{ overflow: 'hide' }}/> :
-              <div className='capsule underscore'>
+              <img src="../img/reporting-locked.gif" width='1500px' style={{ overflow: 'hide' }}/> :
+              <div className='capsule'>
                 <img src="../img/reporting_code.png" className='column one-third'/>
-                <img src="../img/reporting.gif" className='column two-thirds'/>
+                <img src="../img/reporting-locked.gif" className='column two-thirds'/>
               </div>
             }
+            <div className='give-me-some-space'></div>
           </div>
         </div>
 
@@ -86,6 +90,7 @@ export let Projects = React.createClass({
                 <img src="../img/builder.gif" className='column four-fifths centered'/>
               </div>
             }
+            <div className='give-me-some-space'></div>
             <div className='give-me-some-space'></div>
           </div>
         </div>
