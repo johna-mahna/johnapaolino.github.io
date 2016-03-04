@@ -30,7 +30,6 @@ a:active, a.active{cursor: default;}
 /* Layout */
 hr,.rule{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #ddd}hr:before,.rule:before{display:table;content:""}hr:after,.rule:after{display:table;clear:both;content:""}
 .big-box {padding-left:20px;padding-right:20px;width: 100%;height: 100%;overflow: scroll;
-	border: 1px solid blue;
 }
 .big-box{margin-right:auto;margin-left:auto}
 .big-box:before{display:table;content:""}
