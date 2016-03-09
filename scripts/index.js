@@ -14,7 +14,8 @@ import {Projects} from './components/Projects.jsx';
 import {Brand} from './components/Brand.jsx';
 import NoMatch from './components/NoMatch';
 
-import Repos from './components/Repos';
+import {CodeLab} from './components/CodeLab.jsx';
+import {BikeBlock} from './components/BikeBlock.jsx';
 import Repo from './components/Repo';
 
 render((
@@ -28,8 +29,9 @@ render((
       <Route path="/work/brand" component={Brand} ignoreScrollBehavior/>
       <Redirect from='/work' to='/work/projects'/>
     </Route>
-    <Route path="/repos" component={Repos}>
-      <Route path="/repos/:userName/:repoName" component={Repo}/>
+    <Route path="/code" component={CodeLab}>
+      <Route path="/repos/bike" component={BikeBlock}/>
+      <Redirect from='/repos' to='/repos/bike'/>
     </Route>
     <Route path="*" component={NoMatch}/>
   </Router>
