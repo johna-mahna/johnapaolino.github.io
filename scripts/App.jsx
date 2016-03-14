@@ -131,13 +131,11 @@ export let App = React.createClass({
               <div className={detectMobile ? 'give-me-some-serious-space' : 'give-me-some-space'}></div>
               <div>Johna is currently a <strong>Senior Product Designer @ Yieldbot</strong>.
               She has experience as a Front-End Developer and Architect.
+              She built this website using react & react-router.
               She hates talking about herself in the third-person.
+              <span>&#32;&#32;[ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank' style={{fontSize: '0.8em'}}>see the source code</a> ]</span>
               </div>
               <div className={detectMobile ? 'give-me-some-serious-space' : 'give-me-some-space'}></div>
-              <div style={{fontSize: '0.9em', marginLeft: '20px'}}>
-                This website was built using react and react-router.&#32;&#32;
-                <span>&#32;&#32;[ <a href='https://github.com/johnapaolino/johnapaolino.github.io' target='_blank' style={{fontSize: '0.8em'}}>see the source code</a> ]</span>
-              </div>
             </div>
 
           </div>
