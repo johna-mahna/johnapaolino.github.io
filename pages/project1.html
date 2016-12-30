@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>johnapaolino.github.io</title>
+    <link rel=stylesheet href='../styles/simple-grid.css' />
+    <link rel=stylesheet href='../styles/main.css' />
+</head>
+<body>
+    <div class='col-10 center'>
+      <br/>
+      <br/><br/>
+      <nav id='main'>
+        <div class='col-2 left'>
+          <span class="trigger"><a href='../index.html'>← back</a></span>
+        </div>
+      </nav>
+    </div>
+
+    <div class='col-8 center'>
+
+      <h3>Project 1</h3>
+      <br/>
+      <video style="width: 100%" controls autoplay src="../videos/meow-take-1.mov" type="video/mov">
+          note about something
+      </video>
+      <div>
+        Blah blah about project
+      </div>
+
+    </div>
+
+    <script>
+
+      const triggers = document.querySelectorAll('.trigger');
+
+      const highlight = document.createElement('span');
+      highlight.classList.add('highlight');
+      document.body.append(highlight);
+
+      function highlightLink(){
+        // console.log("Highlightt!!");
+        const linkCoords = this.getBoundingClientRect();
+        const coords = {
+          width: linkCoords.width,
+          height: linkCoords.height,
+          top: linkCoords.top + window.scrollY,
+          left: linkCoords.left + window.scrollX
+        };
+
+        highlight.style.width = `${coords.width}px`;
+        highlight.style.height = `${coords.height}px`;
+        highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+      }
+
+      triggers.forEach(tab => tab.addEventListener('mouseenter', highlightLink));
+
+      const nav = document.querySelector('#main');
+      const topOfNav = nav.offsetTop;
+
+
+      function fixNav() {
+
+          if(window.scrollY >= topOfNav){
+            document.body.style.paddingTop = nav.offsetHeight;
+            document.body.classList.add('fixed-nav');
+          } else {
+            document.body.classList.remove('fixed-nav')
+          }
+      }
+
+      window.addEventListener('scroll', fixNav);
+
+    </script>
+</body>
+</html>
