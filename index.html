@@ -3,7 +3,6 @@
     <title>johnapaolino.github.io</title>
     <!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700,300italic,400,300' rel='stylesheet' type='text/css'> -->
     <!-- grid -->
-    <link rel=stylesheet href='reset.css' />
     <!-- <link rel=stylesheet href='styles/simple-grid.css' /> -->
     <link rel=stylesheet href='styles/simple-grid.css' />
     <!-- <link rel=stylesheet href='styles/flexgrid.css' /> -->
@@ -32,15 +31,15 @@
       <br/>
 
       <div class="tabs">
-        <div class="tab is-tab-selected">Work</div>
-        <div class="tab">Code</div>
-        <div class="tab">Info</div>
+        <div id='first-tab' class="tab trigger is-tab-selected">Work</div>
+        <div class="tab trigger">Code</div>
+        <div class="tab trigger">Info</div>
       </div>
 
       <br/>
 
       <!-- container -->
-      <div>
+      <div id='container-uxwork'>
 
         <div class="featureListItem">
           <div class="featureListItem__icon">
@@ -57,22 +56,54 @@
 
         <div class="featureListItem">
           <div class="featureListItem__icon">
-            <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+            <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
           </div>
           <div class="featureListItem__description">
             <h3 style="margin: 0;"> Project Name</h3>
             <div>
               long description about the project long description about the project
               long description about the project
+            <div class='trigger'>
+              <a href=''>check it out →</a>
+            </div>
             </div>
           </div>
         </div>
-
-
       </div>
 
       </div>
 
-    <!-- <script src="/dist/bundle.js"></script> -->
+    <script>
+      const triggers = document.querySelectorAll('.trigger');
+      const tabs = document.querySelectorAll('.tab');
+
+      const highlight = document.createElement('span');
+      highlight.classList.add('highlight');
+      document.body.append(highlight);
+
+      function highlightLink(){
+        // console.log("Highlightt!!");
+        const linkCoords = this.getBoundingClientRect();
+        const coords = {
+          width: linkCoords.width,
+          height: linkCoords.height,
+          top: linkCoords.top + window.scrollY,
+          left: linkCoords.left + window.scrollX
+        };
+
+        highlight.style.width = `${coords.width}px`;
+        highlight.style.height = `${coords.height}px`;
+        highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+      }
+
+      function updateContent(){
+        triggers.forEach(tab => tab.classList.remove('is-tab-selected'));
+        this.classList.add('is-tab-selected');
+      }
+
+      triggers.forEach(tab => tab.addEventListener('mouseenter', highlightLink));
+      tabs.forEach(tab => tab.addEventListener('mousedown', updateContent));
+
+    </script>
 </body>
 </html>

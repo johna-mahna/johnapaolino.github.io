@@ -55,7 +55,7 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 200;
   line-height: 1.8;
 }
@@ -97,12 +97,6 @@ p {
   width: 100%;
   border-radius: 3px;
   -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.thumbnail:hover {
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.15);
-  cursor: pointer;
 }
 
 .featureListItem {
@@ -148,12 +142,25 @@ p {
     font-size: 14px;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
+    transition: all 0.2s;
   }
 
   .tab.is-tab-selected {
+    transition: all 0.2s;
     border-bottom-color: #1fdaeb;
   }
 
 /*SVG*/
 
 .cls-1,.cls-3{fill:none;}.cls-1{stroke:#1fdaeb;}.cls-1,.cls-4{stroke-linecap:round;stroke-width:2px;}.cls-1,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2,.cls-4{fill:#e4f9fb; stroke:#3eefff; }.cls-3,.cls-4{stroke:#3eefff;}.cls-3{stroke-linecap:square;stroke-width:8px;}
+
+/*highlight*/
+.highlight {
+  transition: all 0.2s;
+  position: absolute;
+  top:0;
+  background-color: #e4f9fb;
+  left:0;
+  z-index: -1;
+  display: block;
+}
