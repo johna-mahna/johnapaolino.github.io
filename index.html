@@ -23,24 +23,23 @@
 
       <br/><br/>
       <h2>Johna Paolino</h2>
-      <h5>UX/UI Designer</h5>
+      <h5>UX / UI Designer</h5>
       <p>
-        I specialize in functional UX design for start-ups. Most of my work are tools for the web to make people's jobs easier. Yes, I am a designer that codes front-end.
+        I specialize in user experience design. Most of my work has been for start-ups and focused on creating more effecient tooling for businesses. I am a designer that codes. I coded this website, but not well.
       </p>
 
       <br/>
 
       <div class="tabs">
-        <div id='first-tab' class="tab trigger is-tab-selected">Work</div>
-        <div class="tab trigger">Code</div>
-        <div class="tab trigger">Info</div>
+        <div data-tab="1" class="tab trigger is-tab-selected">Work</div>
+        <div data-tab="2" class="tab trigger">Code</div>
+        <div data-tab="3" class="tab trigger">Info</div>
       </div>
 
       <br/>
 
       <!-- container -->
-      <div id='container-uxwork'>
-
+      <div id="1" class="content-bucket fade-content">
         <div class="featureListItem">
           <div class="featureListItem__icon">
             <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
@@ -71,39 +70,59 @@
         </div>
       </div>
 
+      <div id="2" class="content-bucket is-hidden">
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
+            <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+          </div>
+          <div class="featureListItem__description">
+            <h3 style="margin: 0;"> SECOND Name</h3>
+            <div>
+              long description about the project long description about the project
+              long description about the project
+            </div>
+          </div>
+        </div>
       </div>
 
+      <div id="3" class="content-bucket is-hidden">
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
+            <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+          </div>
+          <div class="featureListItem__description">
+            <h3 style="margin: 0;"> THIRD Name</h3>
+            <div>
+              long description about the project long description about the project
+              long description about the project
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+    <script src="js/highlight.js"></script>
+    <script src="js/tabs.js"></script>
     <script>
-      const triggers = document.querySelectorAll('.trigger');
-      const tabs = document.querySelectorAll('.tab');
+      const buckets = document.querySelectorAll('.content-bucket');
 
-      const highlight = document.createElement('span');
-      highlight.classList.add('highlight');
-      document.body.append(highlight);
+      function updateContent(e){
+        const currentTab = Number(e.srcElement.dataset.tab);
+        buckets.forEach(function(bucket){
+          const bucketId = Number(bucket.getAttribute('id'));
+          if (bucketId === currentTab) {
+            bucket.classList.remove('is-hidden');
+            bucket.classList.add('fade-content');
+          } else {
+            bucket.classList.add('is-hidden');
+            bucket.classList.remove('fade-content');
+          }
+        });
 
-      function highlightLink(){
-        // console.log("Highlightt!!");
-        const linkCoords = this.getBoundingClientRect();
-        const coords = {
-          width: linkCoords.width,
-          height: linkCoords.height,
-          top: linkCoords.top + window.scrollY,
-          left: linkCoords.left + window.scrollX
-        };
-
-        highlight.style.width = `${coords.width}px`;
-        highlight.style.height = `${coords.height}px`;
-        highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
       }
 
-      function updateContent(){
-        triggers.forEach(tab => tab.classList.remove('is-tab-selected'));
-        this.classList.add('is-tab-selected');
-      }
-
-      triggers.forEach(tab => tab.addEventListener('mouseenter', highlightLink));
       tabs.forEach(tab => tab.addEventListener('mousedown', updateContent));
-
     </script>
 </body>
 </html>
