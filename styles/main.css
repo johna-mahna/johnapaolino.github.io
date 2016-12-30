@@ -1,3 +1,8 @@
+/*SVG*/
+
+.cls-1,.cls-3{fill:none;}.cls-1{stroke:#1fdaeb;}.cls-1,.cls-4{stroke-linecap:round;stroke-width:2px;}.cls-1,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2,.cls-4{fill:#e4f9fb; stroke:#3eefff; }.cls-3,.cls-4{stroke:#3eefff;}.cls-3{stroke-linecap:square;stroke-width:8px;}
+
+
 /*@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);*/
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
@@ -16,48 +21,42 @@ body {
 
 /* ROOT FONT STYLES */
 
-* {
-  font-family: 'Oxygen', sans-serif;
-  color: #333447;
-  line-height: 1.5;
-}
-
 /* TYPOGRAPHY */
 
 h1 {
-  margin: 0.1rem;
   font-size: 2.5rem;
 }
 
 h2 {
-  margin: 0.1rem;
   font-size: 2rem;
 }
 
 h3 {
-  margin: 0.1rem;
   font-size: 1.375rem;
 }
 
 h4 {
-  margin: 0.1rem;
   font-size: 1.125rem;
 }
 
 h5 {
-  margin: 0.1rem;
   font-size: 1rem;
 }
 
 h6 {
-  margin: 0.1rem;
   font-size: 0.875rem;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+}
+
+* {
+  font-family: 'Oxygen', sans-serif;
+  color: #222;
+  line-height: 2;
 }
 
 .font-light {
@@ -92,10 +91,18 @@ p {
   text-align: justify;
 }
 
+.spacer {
+  height: 300px;
+  background-color: red;
+}
+
 .thumbnail {
   display: block;
   width: 100%;
+  width: 250px;
   border-radius: 3px;
+  border: 1px solid #ececec;
+  box-shadow:0 0 10px 3px rgba(0,0,0,0.1);
   -webkit-transition: all 300ms ease;
 }
 
@@ -103,6 +110,10 @@ p {
   display: flex;
   align-items: center;
   padding: 10px;
+}
+
+.featureListItem--reverse {
+  flex-direction: row-reverse;
 }
 
 .featureListItem + .featureListItem {
@@ -127,7 +138,6 @@ p {
     display: block;
     align-items: center;
     padding: 10px;
-
   }
 
 }
@@ -159,10 +169,6 @@ p {
     transition: all 0.2s;
     border-bottom-color: #1fdaeb;
   }
-
-/*SVG*/
-
-.cls-1,.cls-3{fill:none;}.cls-1{stroke:#1fdaeb;}.cls-1,.cls-4{stroke-linecap:round;stroke-width:2px;}.cls-1,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2,.cls-4{fill:#e4f9fb; stroke:#3eefff; }.cls-3,.cls-4{stroke:#3eefff;}.cls-3{stroke-linecap:square;stroke-width:8px;}
 
 /*highlight*/
 .highlight {

@@ -3,11 +3,8 @@
     <title>johnapaolino.github.io</title>
     <!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700,300italic,400,300' rel='stylesheet' type='text/css'> -->
     <!-- grid -->
-    <!-- <link rel=stylesheet href='styles/simple-grid.css' /> -->
-    <link rel=stylesheet href='styles/simple-grid.css' />
-    <!-- <link rel=stylesheet href='styles/flexgrid.css' /> -->
+    <link rel=stylesheet href='styles/simple-grid.css'/>
     <link rel=stylesheet href='styles/main.css' />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 </head>
 <body>
     <div class='col-8 center'>
@@ -33,9 +30,9 @@
       <br/>
 
       <div class="tabs">
-        <div data-tab="1" class="tab trigger is-tab-selected">Work</div>
-        <div data-tab="2" class="tab trigger">Code</div>
-        <div data-tab="3" class="tab trigger">Info</div>
+        <div data-tab="1" class="tab trigger is-tab-selected">Selected UX Work</div>
+        <div data-tab="2" class="tab trigger">Code Playground</div>
+        <div data-tab="3" class="tab trigger">About</div>
       </div>
 
 
@@ -45,13 +42,15 @@
       <div id="1" class="content-bucket fade-content">
         <div class="featureListItem">
           <div class="featureListItem__icon">
-            <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+            <div class="icon fa fa-calendar"><img class="thumbnail" style="width: 250px" src='images/thumbnails/check-in.png'/></div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Project Name</h3>
+            <h3>Event Check-in @ GA</h3>
             <div>
-              long description about the project long description about the project
-              long description about the project
+              Quick project that allowed students to quickly sign up for free events on campus.
+            </div>
+            <div class='trigger' style='display: inline-block'>
+              <a href='/pages/work/project1.html'>Learn more →</a>
             </div>
           </div>
         </div>
@@ -61,10 +60,26 @@
             <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Project Name</h3>
+            <h3>Campaign Optimization Interface</h3>
             <div>
-              long description about the project long description about the project
-              long description about the project
+              <div>
+                Primary tool used by ad optimizers to monitor campaign performance.
+              </div>
+              <div class='trigger' style='display: inline-block'>
+                <a href='/pages/work/project1.html'>Check it out →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="featureListItem featureListItem--reverse">
+          <div class="featureListItem__icon">
+            <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+          </div>
+          <div class="featureListItem__description">
+            <h3>Ad Builder</h3>
+            <div>
+              Tool that allowed account managers to quickly customize formatting of our display ad offerings to meet client needs.
             <div class='trigger'>
               <a href='/pages/work/project1.html'>check it out →</a>
             </div>
@@ -77,13 +92,12 @@
             <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Project Name</h3>
+            <h3>Publisher Account Manager</h3>
             <div>
-              long description about the project long description about the project
-              long description about the project
-            <div class='trigger'>
-              <a href='/pages/work/project1.html'>check it out →</a>
-            </div>
+              <div>This tool employed safer UX strategies to prevent mistakes managing live ad slots.</div>
+              <div class='trigger'>
+                <a href='/pages/work/project1.html'>check it out →</a>
+              </div>
             </div>
           </div>
         </div>
@@ -93,33 +107,32 @@
             <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Project Name</h3>
+            <h3>Query Builder</h3>
             <div>
-              long description about the project long description about the project
-              long description about the project
-            <div class='trigger'>
-              <a href='/pages/work/project1.html'>check it out →</a>
-            </div>
+              <div> Reporting tool.</div>
+              <div class='trigger'>
+                <a href='/pages/work/project1.html'>check it out →</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="featureListItem">
           <div class="featureListItem__icon">
-            <div><img class="thumbnail" style="width: 250px" src='images/test.png'/></div>
+            <div><img class="thumbnail" src='images/thumbnails/instruction.gif'/></div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Project Name</h3>
+            <h3>Studies in Online Learning</h3>
             <div>
-              long description about the project long description about the project
-              long description about the project
-            <div class='trigger'>
-              <a href='/pages/work/project1.html'>check it out →</a>
-            </div>
+              <div>Currently trying to understand and increase engagement in online learning.</div>
+              <div class='trigger'>
+                <a href='/pages/work/project1.html'>check it out →</a>
+              </div>
             </div>
           </div>
         </div>
 
+        <div class="spacer"></div>
       </div>
 
       <div id="2" class="content-bucket is-hidden">
@@ -155,26 +168,7 @@
 
     <script src="js/highlight.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/updateContent.js"></script>
 
-    <script>
-      const buckets = document.querySelectorAll('.content-bucket');
-
-      function updateContent(e){
-        const currentTab = Number(e.srcElement.dataset.tab);
-        buckets.forEach(function(bucket){
-          const bucketId = Number(bucket.getAttribute('id'));
-          if (bucketId === currentTab) {
-            bucket.classList.remove('is-hidden');
-            bucket.classList.add('fade-content');
-          } else {
-            bucket.classList.add('is-hidden');
-            bucket.classList.remove('fade-content');
-          }
-        });
-
-      }
-
-      tabs.forEach(tab => tab.addEventListener('mousedown', updateContent));
-    </script>
 </body>
 </html>
