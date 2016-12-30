@@ -2,7 +2,6 @@
 
 .cls-1,.cls-3{fill:none;}.cls-1{stroke:#1fdaeb;}.cls-1,.cls-4{stroke-linecap:round;stroke-width:2px;}.cls-1,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2,.cls-4{fill:#e4f9fb; stroke:#3eefff; }.cls-3,.cls-4{stroke:#3eefff;}.cls-3{stroke-linecap:square;stroke-width:8px;}
 
-
 /*@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);*/
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
@@ -17,11 +16,18 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
+  line-height: 2;
 }
 
 /* ROOT FONT STYLES */
 
 /* TYPOGRAPHY */
+
+* {
+  font-family: 'Oxygen', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
 
 h1 {
   font-size: 2.5rem;
@@ -51,12 +57,6 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
-}
-
-* {
-  font-family: 'Oxygen', sans-serif;
-  color: #222;
-  line-height: 2;
 }
 
 .font-light {
@@ -93,7 +93,7 @@ p {
 
 .spacer {
   height: 300px;
-  background-color: red;
+  background-color: white;
 }
 
 .thumbnail {
@@ -102,7 +102,7 @@ p {
   width: 250px;
   border-radius: 3px;
   border: 1px solid #ececec;
-  box-shadow:0 0 10px 3px rgba(0,0,0,0.1);
+  box-shadow:0 0 5px 3px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 300ms ease;
 }
 
