@@ -92,6 +92,9 @@ a {
   text-align: center;
   min-width: 100px;
   min-height: 50px;
+  color: var(--dark-teal);
+  font-weight:300;
+  text-decoration: none;
 }
 
 .font-light {
