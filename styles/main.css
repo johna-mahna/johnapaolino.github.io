@@ -81,6 +81,13 @@ a {
   text-decoration: none;
 }
 
+a > h3 {
+  transition: all 0.2s;
+}
+a > h3:hover {
+  text-decoration: underline;
+}
+
 .back-container {
   text-align: right;
   max-width: 650px;
@@ -129,11 +136,6 @@ a {
   text-align: justify;
 }
 
-.spacer {
-  height: 300px;
-  background-color: white;
-}
-
 .thumbnail {
   display: block;
   width: 100%;
@@ -142,11 +144,17 @@ a {
   border-radius: 3px;
   border: 1px solid #ececec;
   box-shadow:0 0 5px 3px rgba(0, 0, 0, 0.05);
+  transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
 }
 
 .thumbnail:hover {
   box-shadow:0 0 15px 4px rgba(228, 249, 251, 1);
+}
+
+.content-bucket {
+  /*Controls height of sections for space at the bottom and also to prevent weird interaction glitches*/
+  min-height: 1080px;
 }
 
 .featureListItem {

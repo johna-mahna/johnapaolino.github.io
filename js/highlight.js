@@ -4,7 +4,6 @@ highlight.classList.add('highlight');
 document.body.append(highlight);
 
 function highlightLink(){
-  console.log("Highlightt!!");
   const linkCoords = this.getBoundingClientRect();
   const coords = {
     width: linkCoords.width,
