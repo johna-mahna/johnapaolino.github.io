@@ -2,6 +2,7 @@
 <head>
     <title>johnapaolino.github.io</title>
     <!-- grid -->
+    <link rel="stylesheet" href='http://weloveiconfonts.com/api/?family=entypo'/>
     <link rel=stylesheet href='styles/simple-grid.css'/>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
@@ -23,15 +24,14 @@
 
       <br/><br/>
       <h2>Johna Paolino</h2>
-      <h5>UX / UI Designer</h5>
       <p>
-        Welcome to my website. I am a User Experience Designer who enjoys diving into code as well as fine-tuning visual design. You can find the code for this website on
-        <a target="_blank" href="https://github.com/johnapaolino/" class="trigger">my github</a>. My work has been mainly focused around more effecient tooling for start-ups.
+        I am a User Experience Designer who enjoys diving into code as well as fine-tuning visual and interface design.
+        My work has been mainly focused around more effecient tooling for start-ups.
       </p>
       <br/>
       <div class="tabs">
-        <div data-tab="1" class="tab trigger is-tab-selected">Recent Work</div>
-        <div data-tab="2" class="tab trigger">Coding Fun</div>
+        <div data-tab="1" class="tab trigger is-tab-selected">Work</div>
+        <div data-tab="2" class="tab trigger">Code</div>
         <div data-tab="3" class="tab trigger">About</div>
       </div>
 
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="featureListItem featureListItem--reverse">
+        <div class="featureListItem">
           <div class="featureListItem__icon">
             <div>
               <a href='/pages/work/online-learning.html' class='trigger'>
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <div class="featureListItem">
+        <div class="featureListItem featureListItem--reverse">
           <div class="featureListItem__icon">
             <div>
               <a href='/pages/work/campaign-optimization.html' class='trigger'>
@@ -109,45 +109,31 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="featureListItem">
-          <div class="featureListItem__icon">
-            <div>
-              <a href='/pages/code/project1.html' class='trigger'>
-              <img class="thumbnail" style="width: 250px" src='images/thumbnails/meow.png'/>
-              </a>
-            </div>
-          </div>
-          <div class="featureListItem__description">
-            <h3>Publisher Account Manager</h3>
-            <div>Ad slot management tool emplying safer UX strategies.
-              <div class='trigger' style='display: inline-block'>
-                <a href='/pages/work/project1.html'>View Project &rarr;</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="spacer"></div>
       </div>
 
       <div id="2" class="content-bucket is-hidden">
-        <div class="featureListItem">
+        <p class="featureListItem" style="text-align: left;">
+           Even though my focus is User Experience, I still enjoy diving into code. I am comfortable coding with Html, CSS, and Javascript.
+           I built this website using vanillaJS and some new es6 string templating to get the cool highlight interaction.
+           Below are some quick experiments that have allowed me to figure out some newer libraries and technologies.
+        </p>
+        <div class="featureListItem" style="border: none;">
           <div class="featureListItem__icon">
             <div>
-              <a href='/pages/code/project1.html' class='trigger'>
-              <img class="thumbnail" style="width: 250px" src='images/test.png'/>
+              <a href='/pages/code/eyes.html' class='trigger'>
+              <img class="thumbnail" style="width: 250px" src='images/thumbnails/critter.png'/>
               </a>
             </div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> SECOND Name</h3>
-            <div>
-              long description about the project long description about the project
-              long description about the project
-            </div>
-            <div class='trigger' style='display: inline-block'>
-              <a href='/pages/code/project1.html'>View Project &rarr;</a>
+            <a href='/pages/code/eyes.html'><h3>Annoyed Eyes</h3></a>
+            <div>Figuring out how to trigger animations with mouse velocity and location.
+              <div>
+                <span class='tag'>p5.js</span>
+              </div>
+              <div class='trigger' style='display: inline-block'>
+                <a href='/pages/code/eyes.html'>Try it out &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
@@ -155,19 +141,42 @@
         <div class="featureListItem">
           <div class="featureListItem__icon">
             <div>
-              <a href='/pages/code/eyes.html' class='trigger'>
-              <img class="thumbnail" style="width: 250px" src='images/test.png'/>
+              <a href='/pages/code/star-field.html' class='trigger'>
+              <img class="thumbnail" style="width: 250px" src='images/thumbnails/code_stars.png'/>
               </a>
             </div>
           </div>
           <div class="featureListItem__description">
-            <h3 style="margin: 0;"> SECOND Name</h3>
-            <div>
-              long description about the project long description about the project
-              long description about the project
+            <a href='/pages/code/star-field.html'><h3>Star Field</h3></a>
+            <div>Playing around with drawing cool shapes.
+              <div>
+                <span class='tag'>p5.js</span>
+              </div>
+              <div class='trigger' style='display: inline-block'>
+                <a href='/pages/code/star-field.html'>Try it out &rarr;</a>
+              </div>
             </div>
-            <div class='trigger' style='display: inline-block'>
-              <a href='/pages/code/eyes.html'>View Project &rarr;</a>
+          </div>
+        </div>
+
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
+            <div>
+              <a href='/pages/code/drum-kit.html' class='trigger'>
+              <img class="thumbnail" style="width: 250px" src='images/thumbnails/sounds.png'/>
+              </a>
+            </div>
+          </div>
+          <div class="featureListItem__description">
+            <a href='/pages/code/drum-kit.html'><h3>Drum Kit</h3></a>
+            <div>Loading some sounds and testing out es6.
+              <div>
+                <span class='tag'>vanillaJS</span>
+                <span class='tag'>es6</span>
+              </div>
+              <div class='trigger' style='display: inline-block'>
+                <a href='/pages/code/drum-kit.html'>Try it out &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
@@ -175,13 +184,35 @@
       </div>
 
       <div id="3" class="content-bucket is-hidden">
-          <div class="featureListItem__description">
-            <h3 style="margin: 0;"> Info about me here</h3>
+        <div style="background-color: #ddd">
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
             <div>
-              long description about the project long description about the project
-              long description about the project
+              <a href='https://www.linkedin.com/in/johnapaolino' class='trigger'>
+              </a>
             </div>
           </div>
+          <div class="featureListItem__description">
+            <div>
+              <p>
+                I currently work at General Assembly.
+              </p>
+              <div>
+                Go check out my
+                  <a href='https://www.linkedin.com/in/johnapaolino' class='trigger'>LinkedIn</a>
+                for all that resume information.
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="thumbnail" style="width: 200px" src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAi7AAAAJDE1NTQ3Y2VlLTM4NGUtNDE2MS1hMzUyLTY2YjA3MThlYTZlZA.jpg'/>
+        <div >
+          <div class="social entypo-facebook-squared"></div>
+          <div class="social entypo-github"></div>
+          <div class="social">&#62217;</div>
+          <div class="social">&#62232;</div>
+        </div>
+        </div>
         </div>
       </div>
 
