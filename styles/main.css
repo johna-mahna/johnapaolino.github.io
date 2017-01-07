@@ -164,6 +164,10 @@ a > h3:hover {
   min-height: 1080px;
 }
 
+.detail-page-content {
+  margin-top: -40px;
+}
+
 .featureListItem {
   display: flex;
   align-items: center;
@@ -202,27 +206,6 @@ a > h3:hover {
   margin: 10px 0;
 }
 
-@media only screen and (max-width : 750px) {
-  .featureListItem {
-    display: block;
-    align-items: center;
-    /*padding: 10px;*/
-  }
-
-  .back-container {
-    text-align: left;
-  }
-
-  .back {
-    display: inline-block;
-    line-height: 3;
-    text-align: left;
-    min-width: 100px;
-    min-height: 50px;
-  }
-
-}
-
 
 /*Tabs*/
 
@@ -240,7 +223,7 @@ a > h3:hover {
     cursor: pointer;
     padding: 5px 30px;
     color: var(--dark-teal);
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     transition: all 0.2s;
@@ -366,4 +349,39 @@ video {
 
 .medium:hover, .social:hover {
   border: 1px solid var(--dark-teal);
+}
+
+/*Handle Mobile cases*/
+
+@media only screen and (max-width : 750px) {
+  .featureListItem {
+    display: block;
+    align-items: center;
+    /*padding: 10px;*/
+  }
+
+  .back-container {
+    width: 100%;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background-color: white;
+    border-top: 1px solid #ececec;
+    padding-left: 10px;
+  }
+
+  .back {
+    display: inline-block;
+    line-height: 3;
+    text-align: left;
+    min-width: 100px;
+    min-height: 50px;
+  }
+
+  .detail-page-content {
+    margin-top: 0px;
+  }
+
 }
