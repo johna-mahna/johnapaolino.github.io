@@ -1,0 +1,385 @@
+:root {
+  --dark-teal: #3ad8e7;
+}
+
+/*SVG*/
+
+.cls-1,.cls-3{fill:none;}.cls-1{stroke:var(--dark-teal);}.cls-1,.cls-4{stroke-linecap:round;stroke-width:2px;}.cls-1,.cls-3,.cls-4{stroke-miterlimit:10;}.cls-2,.cls-4{fill:#e4f9fb; stroke:#3eefff; }.cls-3,.cls-4{stroke:#3eefff;}.cls-3{stroke-linecap:square;stroke-width:8px;}
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+
+
+/* UNIVERSAL */
+
+html { -webkit-font-smoothing: antialiased }
+/* Fixes weird Safari flickering bug */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  line-height: 2;
+}
+
+/* ROOT FONT STYLES */
+
+/* TYPOGRAPHY */
+
+* {
+  font-family: 'Oxygen', sans-serif;
+  color: #222;
+  line-height: 1.68;
+}
+
+code {
+  background:#F8F8FF;
+  border:black dashed 1px;
+  padding:2px
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.2em 0;
+  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+.featureListItem__description > h3 {
+  font-size: 1.375rem;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.05rem;
+  font-weight:300;
+  line-height: 1.68;
+}
+
+a {
+  color: var(--dark-teal);
+  font-weight:300;
+  text-decoration: none;
+}
+
+a > h3 {
+  transition: all 0.2s;
+}
+a > h3:hover {
+  text-decoration: underline;
+}
+
+.name {
+  font-weight: 300;
+  color: #0d727c;
+  margin-bottom: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.description {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  font-size: 1.25em;
+  color: #0d727c;
+}
+
+.back-container {
+  text-align: right;
+  max-width: 650px;
+}
+
+.back {
+  display: inline-block;
+  line-height: 3;
+  text-align: center;
+  min-width: 100px;
+  min-height: 50px;
+  color: var(--dark-teal);
+  font-weight:300;
+  text-decoration: none;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+/* POSITIONING */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  width: 250px;
+  margin: 0;
+  border-radius: 3px;
+  border: 1px solid #ececec;
+  box-shadow:0 0 5px 3px rgba(0, 0, 0, 0.05);
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+}
+
+.thumbnail:hover {
+  box-shadow:0 0 15px 4px rgba(228, 249, 251, 1);
+}
+
+.content-bucket {
+  /*Controls height of sections for space at the bottom and also to prevent weird interaction glitches*/
+  min-height: 1080px;
+}
+
+.detail-page-content {
+  margin-top: -40px;
+}
+
+.featureListItem {
+  display: flex;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.featureListItem--reverse {
+  flex-direction: row-reverse;
+}
+
+.featureListItem + .featureListItem {
+  border-top: 1px solid #D7DBDD;
+}
+
+.featureListItem__icon,
+.featureListItem__description {
+  padding: 5px 15px;
+}
+
+.featureListItem__description {
+  text-align: left;
+}
+
+.featureListItem__icon {
+  line-height: 0;
+}
+
+.tag {
+  background-color: var(--dark-teal);
+  color: #fff;
+  font-size: 90%;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+
+/*Tabs*/
+
+.tabs {
+  /**
+   * Setting display to flex makes this container lay
+   * out its children using flexbox, the exact same
+   * as in the above "Stepper input" example.
+   */
+  display: flex;
+  border-bottom: 1px solid #D7DBDD;
+}
+
+  .tab {
+    cursor: pointer;
+    padding: 5px 30px;
+    color: var(--dark-teal);
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    margin-bottom: 0px;
+  }
+
+  .tab.is-tab-selected {
+    transition: all 0.2s;
+    border-bottom-color: var(--dark-teal);
+  }
+
+/*highlight*/
+.highlight {
+  transition: all 0.2s;
+  position: absolute;
+  top:0;
+  background-color: #e4f9fb;
+  left:0;
+  z-index: -1;
+  display: block;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.fixed-nav nav {
+  position: fixed;
+  width: 90%;
+}
+
+video {
+  box-shadow:0 0 10px 3px rgba(0,0,0,0.1);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.fade-content {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Cool social icons from: http://codepen.io/oknoblich/pen/noewy*/
+
+.social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  line-height: 50px;
+  font-family: Entypo;
+  font-size: 28px;
+  text-align: center;
+  color: #555;
+  border-radius: 10px;
+  background: #eee;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.social:hover {
+  border: 1px solid var(--dark-teal);
+}
+
+/*Handle Mobile cases*/
+
+@media (max-width : 750px) {
+  .featureListItem {
+    display: block;
+    align-items: center;
+    /*padding: 10px;*/
+  }
+
+  .back-container {
+    width: 100%;
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background-color: white;
+    border-top: 1px solid #ececec;
+    padding-left: 10px;
+  }
+
+  .back {
+    display: inline-block;
+    line-height: 3;
+    text-align: left;
+    min-width: 100px;
+    min-height: 50px;
+  }
+
+  .detail-page-content {
+    margin-top: 0px;
+  }
+
+}
