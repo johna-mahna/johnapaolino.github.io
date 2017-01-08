@@ -351,6 +351,10 @@ video {
 
 /*Handle Mobile cases*/
 
+.mobile-warning {
+  display: none;
+}
+
 @media (max-width : 750px) {
   .featureListItem {
     display: block;
@@ -380,6 +384,18 @@ video {
 
   .detail-page-content {
     margin-top: 0px;
+  }
+
+  .mobile-warning {
+    display: block;
+    position: absolute;
+    text-align: center;
+    background-color: #fffcbe;
+    color: #dda704;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-weight: bold;
   }
 
 }
