@@ -25,6 +25,12 @@ body {
   line-height: 1.68;
 }
 
+.description {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 18px 0 10px;
+}
+
 h3 {
   font-size: 1.5rem;
 }
@@ -227,19 +233,30 @@ td > div {
 
 .cell-name {
   grid-area: name;
-  border-right: 1px solid #eee;
-  padding-top: 90px;
   padding-right: 15px;
+  align-self: end;
 }
 
 .cell-construction {
   grid-area: construction;
-  border-right: 1px solid #eee;
   padding-right: 30px;
-  padding-top: 80px;
+  align-self: end;
+  /* padding-top: 66px; */
   /* text-align: justify;
   word-break: keep-all;
   hyphens: auto; */
+}
+
+.border1 {
+  grid-area: border1
+}
+
+.border2 {
+  grid-area: border2
+}
+
+.border1, .border2 {
+  background-color: #eee;
 }
 
 .work {
@@ -260,20 +277,74 @@ td > div {
 
 .main-grid{
   display: grid;
-  grid-template-columns: 260px 200px auto;
+  grid-template-columns: 260px 1px 200px 1px auto;
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   grid-template-rows: auto 350px;
   grid-template-areas:
-  "name construction work"
-  "name construction press";
+  "name border1 construction border2 work"
+  ". border1 . border2 press";
 }
 
 /*Handle Mobile cases*/
 
-.mobile-warning {
-  display: none;
+@media (max-width : 1020px) {
+  .main-grid{
+    display: grid;
+    grid-template-columns: 260px 1px auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-rows: auto 280px auto;
+    grid-template-areas:
+    "name border1 construction"
+    ". border1 work"
+    ". border1 press";
+  }
+
 }
+
+@media (max-width : 880px) {
+  .main-grid{
+    display: grid;
+    grid-template-columns: 260px 1px auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-rows: auto 280px auto;
+    grid-template-areas:
+    "name border1 construction"
+    "work work work"
+    "press press press";
+  }
+
+}
+
+@media (max-width : 620px) {
+  .main-grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "name"
+    "construction"
+    "work"
+    "press";
+  }
+
+}
+
+@media (max-width : 620px) {
+
+  td:first-child {
+    width: 80px;
+    padding-right: 10px;
+  }
+}
+
 
 @media (max-width : 750px) {
   .featureListItem {
