@@ -4,7 +4,10 @@
   --orange: #F6B23A;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+/* @import url('https://fonts.googleapis.com/css?family=Oxygen'); */
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 
 /* UNIVERSAL */
 
@@ -12,14 +15,18 @@ html { -webkit-font-smoothing: antialiased }
 
 html,
 body {
-  font-size: 15px;
 }
 
 /* TYPOGRAPHY */
 * {
-  font-family: 'Oxygen', sans-serif;
+  font-size: 14px;
+  font-family: 'Gothic A1', sans-serif;
   color: var(--black);
   line-height: 1.68;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -37,7 +44,8 @@ h6 {
 .label {
   text-transform: uppercase;
   font-size: 0.85rem;
-  color: #999;
+  font-weight: 500;
+  /* color: #999; */
 }
 
 p {
@@ -48,7 +56,6 @@ p {
 
 a {
   color: var(--black);
-  font-weight:300;
   text-decoration: none;
 }
 
@@ -59,11 +66,13 @@ a {
 /* TODO: border-bottom: 1px solid var(--black); */
 
 .name {
+  font-family: 'Bungee Shade', cursive;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.8rem;
   letter-spacing: 0.5px;
   color: var(--black);
-  margin-bottom: 0;
+  line-height: 2.8rem;
+  margin-bottom: 10px;
 }
 
 .back-container {
@@ -194,6 +203,27 @@ nav {
 /*Social icons from: http://codepen.io/oknoblich/pen/noewy*/
 
 /* GRID */
+
+table {
+  border-spacing: 0 15px;
+}
+
+.underline-link {
+  border-bottom: 1px solid var(--black);
+}
+
+td {
+  vertical-align: top;
+  margin-bottom: 15px;
+}
+
+td:first-child {
+  width: 150px;
+}
+
+td > div {
+  margin-bottom: 5px;
+}
 
 .cell-name {
   grid-area: name;
