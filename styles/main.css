@@ -205,6 +205,18 @@ nav {
     }
 }
 
+.ga-number {
+  border: 1px solid #333;
+  padding: 7px 9px 4px 8px;
+  font-weight: bold;
+  border-radius: 40px;
+}
+
+.number-span {
+  margin-top: -23px;
+  padding-left: 35px;
+  display: block;
+}
 
 /*Social icons from: http://codepen.io/oknoblich/pen/noewy*/
 
