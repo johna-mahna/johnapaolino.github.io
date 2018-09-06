@@ -236,7 +236,7 @@ td {
 }
 
 td:first-child {
-  width: 150px;
+  width: 170px;
 }
 
 td > div {
@@ -251,12 +251,8 @@ td > div {
 
 .cell-construction {
   grid-area: construction;
-  padding-right: 30px;
-  align-self: end;
-  /* padding-top: 66px; */
-  /* text-align: justify;
-  word-break: keep-all;
-  hyphens: auto; */
+  align-self: center;
+  padding-bottom: 275px;
 }
 
 .border1 {
@@ -295,7 +291,7 @@ td > div {
   grid-template-rows: auto 350px;
   grid-template-areas:
   "name border1 construction border2 work"
-  ". border1 . border2 press";
+  ". border1 construction border2 press";
 }
 
 /*Handle Mobile cases*/
