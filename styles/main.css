@@ -51,7 +51,7 @@ h6 {
   text-transform: uppercase;
   font-size: 0.85rem;
   font-weight: 500;
-  /* color: #999; */
+  color: var(--orange);
 }
 
 p {
@@ -79,6 +79,7 @@ a {
   color: var(--black);
   line-height: 2.8rem;
   margin-bottom: 10px;
+  margin-top: 45px;
 }
 
 .back-container {
@@ -212,6 +213,11 @@ nav {
   border-radius: 40px;
 }
 
+.orange-link{
+  color: var(--orange);
+  text-decoration: underline;
+}
+
 .number-span {
   margin-top: -23px;
   padding-left: 35px;
@@ -246,13 +252,13 @@ td > div {
 .cell-name {
   grid-area: name;
   padding-right: 15px;
-  align-self: end;
+  align-self: start;
 }
 
 .cell-construction {
   grid-area: construction;
-  align-self: center;
-  padding-bottom: 275px;
+  align-self: start;
+  margin-top: 40px;
 }
 
 .border1 {
@@ -269,6 +275,7 @@ td > div {
 
 .work {
   grid-area: work;
+  margin-top: 40px;
 }
 
 .press {
@@ -280,34 +287,45 @@ td > div {
   margin-bottom: 5%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  max-width: 82%;
 }
 
 .main-grid{
   display: grid;
-  grid-template-columns: 260px 1px 200px 1px auto;
+  grid-template-columns: minmax(auto, 260px) 1px minmax(auto, 450px) 1px minmax(auto, 200px);
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   grid-template-rows: auto 350px;
   grid-template-areas:
-  "name border1 construction border2 work"
-  ". border1 construction border2 press";
+  "name border1 work border2 construction"
+  ". border1 press border2 construction";
 }
 
 /*Handle Mobile cases*/
 
-@media (max-width : 1020px) {
+@media (max-width : 1120px) {
+  .container{
+    max-width: 90%;
+  }
+
   .main-grid{
     display: grid;
     grid-template-columns: 260px 1px auto;
     grid-template-rows: auto auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 50px;
-    grid-template-rows: auto 280px auto;
+    grid-template-rows: auto auto;
     grid-template-areas:
-    "name border1 construction"
-    ". border1 work"
-    ". border1 press";
+    "name border1 work"
+    "construction border1 press";
+  }
+
+  .cell-construction {
+    margin-top: 0;
+  }
+
+  .cell-name {
+    align-self: end;
   }
 
 }
@@ -315,32 +333,49 @@ td > div {
 @media (max-width : 880px) {
   .main-grid{
     display: grid;
-    grid-template-columns: 260px 1px auto;
+    grid-template-columns: 200px 1px auto;
     grid-template-rows: auto auto auto;
     grid-column-gap: 30px;
-    grid-row-gap: 50px;
-    grid-template-rows: auto 280px auto;
+    grid-row-gap: 5px;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    "name border1 construction"
+    "construction border1 name"
     "work work work"
     "press press press";
+  }
+
+  .cell-name {
+    align-self: center;
+  }
+
+  .label:last-of-type {
+    margin-top: 15px;
   }
 
 }
 
 @media (max-width : 620px) {
+
   .main-grid{
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
     grid-column-gap: 30px;
-    grid-row-gap: 50px;
-    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 15px;
     grid-template-areas:
     "name"
     "construction"
     "work"
     "press";
+  }
+
+  .label:last-of-type {
+    margin-top: 0px;
+  }
+
+  .work-cell{
+    align-self: start;
+    margin-top: 0;
   }
 
 }
